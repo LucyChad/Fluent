@@ -1,0 +1,43 @@
+# Fluent landing site — Netlify configuration
+# Deploys from this repo. Functions live in netlify/functions/.
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  # Bundle the /files folder into the functions so the download function can read the zips
+  included_files = ["files/*"]
+
+# Redirects: route API paths to functions
+[[redirects]]
+  from = "/api/session"
+  to = "/.netlify/functions/session"
+  status = 200
+
+[[redirects]]
+  from = "/api/download"
+  to = "/.netlify/functions/download"
+  status = 200
+
+# SPA-style fallbacks for thanks page (so /thanks works as well as /thanks.html)
+[[redirects]]
+  from = "/thanks"
+  to = "/thanks.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "interest-cohort=()"
+
+# Cache static assets
+[[headers]]
+  for = "/files/*"
+  [headers.values]
+    # The bundles themselves shouldn't be cached publicly — they're served via the function with auth
+    Cache-Control = "no-store"

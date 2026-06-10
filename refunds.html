@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refunds — Fluent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0B1322; --ink-deep: #060B17; --ink-soft: #131C2E;
+            --cream: #F5E8D8; --peach: #E58A5E; --peach-soft: #F2C7A7;
+            --pink: #E8B4C4; --grey-soft: rgba(245,224,208,0.7);
+            --grey-muted: rgba(245,224,208,0.4); --grey-faint: rgba(245,224,208,0.12);
+            --text-dark: #1E1612; --text-mid: #4A3A30;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); font-size: 17px; line-height: 1.75; }
+        h1, h2 { font-family: 'Playfair Display', serif; line-height: 1.15; letter-spacing: -0.015em; color: var(--text-dark); }
+        h1 em, h2 em { font-style: italic; color: var(--peach); }
+        a { color: var(--peach); text-decoration: underline; }
+        nav { background: var(--ink); padding: 24px 0; border-bottom: 1px solid var(--grey-faint); }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--cream); font-weight: 600; font-style: italic; }
+        .nav-brand .dot { color: var(--peach); font-style: normal; }
+        .nav-back { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--grey-soft); letter-spacing: 0.12em; text-transform: uppercase; }
+        main { padding: 88px 0; }
+        .mono-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--peach); display: block; margin-bottom: 20px; }
+        h1 { font-size: clamp(36px, 5vw, 52px); margin-bottom: 14px; }
+        .updated { font-family: 'JetBrains Mono', monospace; color: var(--text-mid); font-size: 12px; margin-bottom: 56px; letter-spacing: 0.06em; opacity: 0.6; }
+        h2 { font-size: 26px; margin-top: 48px; margin-bottom: 16px; }
+        p { margin-bottom: 18px; color: var(--text-mid); }
+        footer { background: var(--ink-deep); padding: 36px 0; text-align: center; color: var(--grey-muted); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; margin-top: 80px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-inner">
+        <a href="/" class="nav-brand">fluent<span class="dot">.</span>md</a>
+        <a href="/" class="nav-back">← Back</a>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <span class="mono-label">Refunds policy</span>
+        <h1>Plain English. <em>No theatre.</em></h1>
+        <p class="updated">Last updated · 2026-05-08</p>
+
+        <h2>The policy</h2>
+        <p>If a Fluent skill isn't useful to you, reply to your delivery email within <strong>14 days of purchase</strong> and ask for a refund. We process it within 24 hours, no questions asked.</p>
+        <p>You don't have to delete the files. Treat the refund as us recognising the product didn't land for you, and us not wanting your £14.99 if you don't think it earned it.</p>
+
+        <h2>Why we're <em>relaxed</em> about this</h2>
+        <p>The cost to us of processing a refund is small. The cost to you of feeling burnt by a £14.99 download you regret is bigger than the £14.99. Both are best avoided.</p>
+        <p>We'd rather you buy with confidence, try the skill on your real work, and refund if it doesn't help — than not buy at all because the refund policy was fiddly.</p>
+
+        <h2>What you can't refund</h2>
+        <p>The only exception: if you've bought ten or more skills at once (bulk purchase or team licence), we'd appreciate a quick note explaining what didn't work before refunding the full lot. We'll still refund if there's a real issue — we just want to learn from it.</p>
+
+        <h2>How to request one</h2>
+        <p>Reply to your delivery email or write to <a href="mailto:hello@fluent.md">hello@fluent.md</a> with the order reference (in your delivery email) and a one-line reason. We don't grill people for the reason; it just helps us improve.</p>
+        <p>Refunds appear back on the original card within 5–10 working days, depending on your bank.</p>
+
+        <h2>If something's <em>actually broken</em></h2>
+        <p>If the download didn't work, the file is corrupted, or you bought the wrong product by mistake, email us straight away and we'll sort it before the refund question even comes up. We'd rather fix the issue than process the refund.</p>
+    </div>
+</main>
+
+<footer>© 2026 Fluent. All rights reserved.</footer>
+
+</body>
+</html>

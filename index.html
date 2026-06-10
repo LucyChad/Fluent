@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluent — AI skills for small business owners</title>
+    <meta name="description" content="Pre-built AI skills you install into Claude, ChatGPT, or Gemini. Specialist coaches for pricing, content, marketing, loyalty and more. £14.99 each. Instant download.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Fluent — Make your AI fluent in your work">
+    <meta property="og:description" content="Pre-built AI skills you install into Claude, ChatGPT, or Gemini. £14.99 each. Instant download.">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --ink:           #0B1322;
+            --ink-deep:      #060B17;
+            --ink-soft:      #131C2E;
+            --cream:         #F5E8D8;
+            --cream-deep:    #EFDFC9;
+            --cream-card:    #FBE7D9;
+            --peach:         #E58A5E;
+            --peach-soft:    #F2C7A7;
+            --pink:          #E8B4C4;
+            --rose:          #EFC3B0;
+            --grey-soft:     rgba(245, 224, 208, 0.65);
+            --grey-muted:    rgba(245, 224, 208, 0.4);
+            --grey-faint:    rgba(245, 224, 208, 0.12);
+            --text-dark:     #1E1612;
+            --text-mid:      #4A3A30;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--ink);
+            color: var(--text-dark);
+            font-size: 17px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.1;
+            letter-spacing: -0.015em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .container--narrow {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        section { padding: 120px 0; }
+
+        /* ==================== LABEL ==================== */
+        .mono-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--peach);
+            display: block;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .mono-label--left {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        /* ==================== GRADIENT HEADLINE ==================== */
+        .gradient-head {
+            background: linear-gradient(135deg,
+                var(--peach-soft) 0%,
+                var(--rose) 40%,
+                var(--pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        /* ==================== BUTTONS ==================== */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--peach) 0%, var(--pink) 100%);
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 17px 36px;
+            border-radius: 100px;
+            letter-spacing: 0.01em;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 8px 32px rgba(229, 138, 94, 0.18);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(229, 138, 94, 0.28);
+        }
+
+        .btn--large {
+            font-size: 17px;
+            padding: 20px 44px;
+        }
+
+        .btn--ghost {
+            background: transparent;
+            color: var(--cream);
+            border: 1px solid var(--grey-faint);
+            box-shadow: none;
+        }
+
+        .btn--ghost:hover {
+            background: rgba(245, 224, 208, 0.04);
+            border-color: var(--grey-muted);
+        }
+
+        .btn--nav {
+            font-size: 13px;
+            padding: 11px 24px;
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            background-color: var(--ink);
+            padding: 24px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--grey-faint);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--cream);
+            font-weight: 600;
+            font-style: italic;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-brand .dot { color: var(--peach); font-style: normal; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            color: var(--grey-soft);
+            transition: color 0.15s;
+        }
+
+        .nav-link:hover { color: var(--cream); }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            background-color: var(--ink);
+            position: relative;
+            padding: 96px 0 140px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: linear-gradient(180deg, var(--peach) 0%, rgba(229, 138, 94, 0.85) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-strip {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .hero-strip span {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink);
+            letter-spacing: 0.02em;
+        }
+
+        .hero-meta-strip {
+            border-top: 1px solid var(--grey-faint);
+            border-bottom: 1px solid var(--grey-faint);
+            padding: 16px 0;
+            margin: 0 0 80px;
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--grey-soft);
+            letter-spacing: 0.04em;
+        }
+
+        .hero-meta-strip span::before {
+            content: '• ';
+            color: var(--peach);
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 22px;
+            background: var(--ink-soft);
+            border: 1px solid var(--grey-faint);
+            border-radius: 100px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            color: var(--cream);
+            margin-bottom: 48px;
+        }
+
+        .hero-pill::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--peach);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(44px, 7vw, 84px);
+            color: var(--cream);
+            margin-bottom: 32px;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 600;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: clamp(18px, 2vw, 22px);
+            color: var(--grey-soft);
+            max-width: 660px;
+            margin: 0 auto 52px;
+            font-weight: 300;
+            line-height: 1.55;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .hero-fineprint {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--grey-muted);
+            letter-spacing: 0.06em;
+        }
+
+        /* ==================== PROBLEM ==================== */
+        .problem {
+            background-color: var(--cream);
+            color: var(--text-dark);
+        }
+
+        .problem .mono-label { color: var(--peach); }
+
+        .problem h2 {
+            font-size: clamp(34px, 5vw, 58px);
+            color: var(--text-dark);
+            margin-bottom: 36px;
+            line-height: 1.15;
+        }
+
+        .problem h2 em {
+            font-style: italic;
+            color: var(--peach);
+        }
+
+        .problem p {
+            font-size: 19px;
+            line-height: 1.8;
+            color: var(--text-mid);
+            margin-bottom: 24px;
+        }
+
+        .problem p:last-of-type { margin-bottom: 0; }
+
+        .problem-quote {
+            background: var(--ink);
+            color: var(--cream);
+            padding: 48px 56px;
+            margin: 64px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .problem-quote::before {
+            content: '“';
+            position: absolute;
+            top: 16px;
+            left: 28px;
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            color: var(--peach);
+            line-height: 1;
+            font-style: italic;
+        }
+
+        .problem-quote p {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(22px, 2.6vw, 30px);
+            line-height: 1.4;
+            color: var(--cream);
+            font-style: italic;
+            margin: 0;
+            padding-left: 52px;
+        }
+
+        /* ==================== WHAT YOU GET ==================== */
+        .what-you-get {
+            background-color: var(--ink);
+            position: relative;
+            color: var(--cream);
+        }
+
+        .what-you-get::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(245, 224, 208, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 224, 208, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+        }
+
+        .what-you-get .container { position: relative; }
+
+        .what-you-get h2 {
+            font-size: clamp(32px, 4.5vw, 52px);
+            color: var(--cream);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .what-you-get h2 em {
+            font-style: italic;
+            color: var(--peach-soft);
+        }
+
+        .what-you-get .lede {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--grey-soft);
+            margin: 0 auto 80px;
+            max-width: 620px;
+            text-align: center;
+        }
+
+        .files {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .file {
+            background: var(--ink-soft);
+            border: 1px solid var(--grey-faint);
+            border-radius: 10px;
+            padding: 36px 32px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .file:hover {
+            border-color: rgba(229, 138, 94, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .file-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .file-icon {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--peach);
+            background: rgba(229, 138, 94, 0.1);
+            padding: 6px 10px;
+            border-radius: 4px;
+            letter-spacing: 0.06em;
+            border: 1px solid rgba(229, 138, 94, 0.18);
+        }
+
+        .file-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            color: var(--cream);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .file p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--grey-soft);
+        }
+
+        @media (max-width: 720px) {
+            .files { grid-template-columns: 1fr; }
+        }
+
+        /* ==================== CATALOGUE ==================== */
+        .catalogue {
+            background-color: var(--cream);
+            color: var(--text-dark);
+        }
+
+        .catalogue h2 {
+            font-size: clamp(34px, 5vw, 58px);
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .catalogue h2 em {
+            font-style: italic;
+            color: var(--peach);
+        }
+
+        .catalogue .lede {
+            text-align: center;
+            font-size: 17px;
+            color: var(--text-mid);
+            max-width: 600px;
+            margin: 0 auto 80px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 24px;
+        }
+
+        .skill {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(30, 22, 18, 0.06);
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+            border-color: rgba(229, 138, 94, 0.35);
+            box-shadow: 0 12px 36px rgba(229, 138, 94, 0.1);
+        }
+
+        .skill-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--peach);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .skill-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: -0.015em;
+            line-height: 1.2;
+        }
+
+        .skill-name em {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .skill-desc {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-mid);
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .skill-foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding-top: 26px;
+            border-top: 1px solid rgba(30, 22, 18, 0.08);
+        }
+
+        .skill-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .skill-price-currency {
+            color: var(--peach);
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 400;
+            margin-right: 2px;
+        }
+
+        .skill-cta {
+            background: var(--ink);
+            color: var(--cream);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 12px 22px;
+            border-radius: 100px;
+            letter-spacing: 0.02em;
+            transition: background 0.2s;
+        }
+
+        .skill-cta:hover {
+            background: var(--peach);
+            color: var(--ink);
+        }
+
+        /* ==================== HOW IT WORKS ==================== */
+        .how {
+            background-color: var(--ink);
+            color: var(--cream);
+            position: relative;
+        }
+
+        .how h2 {
+            font-size: clamp(34px, 5vw, 58px);
+            color: var(--cream);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .how h2 em {
+            font-style: italic;
+            color: var(--peach-soft);
+        }
+
+        .how .lede {
+            text-align: center;
+            color: var(--grey-soft);
+            max-width: 540px;
+            margin: 0 auto 80px;
+            font-size: 17px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            position: relative;
+        }
+
+        .step-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-style: italic;
+            font-weight: 400;
+            background: linear-gradient(135deg, var(--peach) 0%, var(--pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .step h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 16px;
+        }
+
+        .step p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--grey-soft);
+        }
+
+        @media (max-width: 800px) {
+            .steps { grid-template-columns: 1fr; gap: 56px; }
+        }
+
+        /* ==================== EMAIL CAPTURE ==================== */
+        .capture {
+            background-color: var(--cream);
+        }
+
+        .capture-card {
+            background: linear-gradient(135deg, var(--ink-soft) 0%, var(--ink) 100%);
+            border-radius: 12px;
+            padding: 80px 64px;
+            text-align: center;
+            color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .capture-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(229, 138, 94, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .capture-card .mono-label {
+            color: var(--peach);
+            text-align: center;
+        }
+
+        .capture-card h2 {
+            font-size: clamp(28px, 3.6vw, 44px);
+            color: var(--cream);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .capture-card h2 em {
+            font-style: italic;
+            color: var(--peach-soft);
+        }
+
+        .capture-card p {
+            color: var(--grey-soft);
+            max-width: 480px;
+            margin: 0 auto 44px;
+            font-size: 16px;
+            line-height: 1.65;
+            position: relative;
+        }
+
+        .capture-form {
+            max-width: 480px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+            position: relative;
+        }
+
+        .capture-form input[type="email"] {
+            flex: 1;
+            padding: 16px 22px;
+            border-radius: 100px;
+            border: 1px solid var(--grey-faint);
+            background: rgba(245, 224, 208, 0.06);
+            color: var(--cream);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+        }
+
+        .capture-form input[type="email"]::placeholder { color: var(--grey-muted); }
+
+        .capture-form input[type="email"]:focus {
+            outline: none;
+            border-color: rgba(229, 138, 94, 0.6);
+        }
+
+        /* Kit form widget — coax its styling to feel native to the card */
+        .kit-form-wrap {
+            max-width: 480px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .kit-form-wrap .formkit-form,
+        .kit-form-wrap .formkit-background,
+        .kit-form-wrap .formkit-card {
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+        .kit-form-wrap .formkit-input {
+            background: rgba(245, 224, 208, 0.06) !important;
+            border: 1px solid var(--grey-faint) !important;
+            color: var(--cream) !important;
+            border-radius: 100px !important;
+            padding: 16px 22px !important;
+            font-family: 'DM Sans', sans-serif !important;
+            font-size: 15px !important;
+        }
+        .kit-form-wrap .formkit-input::placeholder {
+            color: var(--grey-muted) !important;
+        }
+        .kit-form-wrap .formkit-submit {
+            background: linear-gradient(135deg, var(--peach) 0%, var(--pink) 100%) !important;
+            color: var(--ink) !important;
+            border-radius: 100px !important;
+            font-family: 'DM Sans', sans-serif !important;
+            font-weight: 600 !important;
+            padding: 17px 36px !important;
+            border: none !important;
+            box-shadow: 0 8px 32px rgba(229, 138, 94, 0.18) !important;
+        }
+        .kit-form-wrap .formkit-submit span {
+            color: var(--ink) !important;
+        }
+        .kit-form-wrap .formkit-guarantee,
+        .kit-form-wrap .formkit-powered-by-convertkit-container {
+            color: var(--grey-muted) !important;
+        }
+        .kit-form-wrap .formkit-powered-by-convertkit {
+            color: var(--grey-muted) !important;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 540px) {
+            .capture-card { padding: 56px 28px; }
+            .capture-form { flex-direction: column; }
+        }
+
+        /* ==================== FAQ ==================== */
+        .faq {
+            background-color: var(--cream);
+            color: var(--text-dark);
+        }
+
+        .faq h2 {
+            font-size: clamp(34px, 5vw, 58px);
+            color: var(--text-dark);
+            margin-bottom: 64px;
+            text-align: center;
+        }
+
+        .faq h2 em {
+            font-style: italic;
+            color: var(--peach);
+        }
+
+        .faq-item {
+            border-top: 1px solid rgba(30, 22, 18, 0.1);
+            padding: 28px 0;
+        }
+
+        .faq-item:last-child { border-bottom: 1px solid rgba(30, 22, 18, 0.1); }
+
+        .faq-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            padding-right: 44px;
+            transition: color 0.2s;
+        }
+
+        .faq-question:hover { color: var(--peach); }
+
+        .faq-question::-webkit-details-marker { display: none; }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--peach);
+            font-size: 30px;
+            font-weight: 300;
+            font-family: 'Playfair Display', serif;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            transition: transform 0.2s;
+        }
+
+        details[open] .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--text-mid);
+            padding-top: 18px;
+            padding-right: 44px;
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--ink-deep);
+            padding: 72px 0 56px;
+            color: var(--cream);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                var(--peach) 50%,
+                transparent 100%);
+            opacity: 0.4;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-style: italic;
+            color: var(--cream);
+            font-weight: 600;
+        }
+
+        .footer-brand .dot { color: var(--peach); font-style: normal; }
+
+        .footer-tag {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--grey-soft);
+            font-size: 15px;
+            max-width: 360px;
+            margin-top: -4px;
+        }
+
+        .footer-contact {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--grey-muted);
+            letter-spacing: 0.04em;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 36px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .footer-links a {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--grey-muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            transition: color 0.15s;
+        }
+
+        .footer-links a:hover { color: var(--peach); }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 720px) {
+            section { padding: 80px 0; }
+            .hero { padding: 80px 0 96px; }
+            .container, .container--narrow { padding: 0 22px; }
+            .problem-quote { padding: 32px 24px 32px 32px; }
+            .problem-quote p { padding-left: 0; }
+            .problem-quote::before { display: none; }
+            .skill { padding: 32px; }
+            .nav-links { display: none; }
+            .capture-card { padding: 56px 28px; }
+            .hero-meta-strip { gap: 24px; padding: 14px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================================================================
+     NAV
+================================================================ -->
+<nav>
+    <div class="container nav-inner">
+        <a href="/" class="nav-brand">fluent<span class="dot">.</span>md</a>
+        <div class="nav-links">
+            <a href="#catalogue" class="nav-link">Skills</a>
+            <a href="#how" class="nav-link">How it works</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#catalogue" class="btn btn--nav">Browse skills</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================================================================
+     HERO
+================================================================ -->
+<section class="hero">
+    <div class="hero-strip">
+        <span>For small business owners using AI to do better work</span>
+    </div>
+
+    <div class="container">
+        <div class="hero-meta-strip">
+            <span>£14.99 per skill</span>
+            <span>Works in Claude, ChatGPT &amp; Gemini</span>
+            <span>Instant download</span>
+            <span>From sale to install in under 10 minutes</span>
+        </div>
+
+        <div class="hero-pill">7 specialist skills available now</div>
+
+        <h1>
+            <span class="gradient-head">Make your AI</span>
+            <br>
+            <em class="gradient-head">fluent</em>
+            <span class="gradient-head">in your work.</span>
+        </h1>
+
+        <p>Pre-built AI skills you install into Claude, ChatGPT, or Gemini. Specialist coaches that turn a generic assistant into one that knows what it's actually doing — in pricing, content, marketing, loyalty, and the rest of the work that keeps a small business running.</p>
+
+        <div class="hero-actions">
+            <a href="#catalogue" class="btn btn--large">Browse the seven</a>
+            <a href="#how" class="btn btn--large btn--ghost">How it works</a>
+        </div>
+
+        <p class="hero-fineprint">Native Claude Skill + plain .md included &nbsp;·&nbsp; No subscription &nbsp;·&nbsp; 14-day refund, no questions</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     PROBLEM
+================================================================ -->
+<section class="problem">
+    <div class="container--narrow">
+        <span class="mono-label mono-label--left">Why this exists</span>
+        <h2>You're already using AI. <em>It's just being average about it.</em></h2>
+
+        <p>The tools save real time. Refusing to use them is a different kind of mistake. But your AI is generic — it pattern-matches to the average answer for whatever you've asked it. Helpful enough for some things. For the stuff that actually matters — your pricing, your audience, your local market, the way your customers buy — average isn't good enough.</p>
+        <p>You could spend the weekend writing a brilliant system prompt that turns your AI into a specialist. You probably won't. We did it for you.</p>
+
+        <div class="problem-quote">
+            <p>The course economy is dead. Skills are the new playbook — £14.99, installed in ten minutes, runs forever.</p>
+        </div>
+
+        <p>Every Fluent skill is a complete coaching system packaged for an AI assistant. The persona, the frameworks, the worksheets, the install guide — written by people who actually know the topic, delivered as a single tidy bundle. Drop it in, paste a few lines about your business, and your AI starts behaving like it's been doing this for years.</p>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     WHAT'S IN A SKILL
+================================================================ -->
+<section class="what-you-get">
+    <div class="container">
+        <span class="mono-label">What you actually get</span>
+        <h2>Every skill is a complete coaching system. <em>Not a prompt. Not a PDF.</em></h2>
+        <p class="lede">Each download is a folder of structured Markdown plus a zipped installable bundle. Same engineered shape across every product. Designed for AI to execute against — not just nod along.</p>
+
+        <div class="files">
+            <div class="file">
+                <div class="file-head">
+                    <span class="file-icon">SKILL.md</span>
+                    <span class="file-name">The coach</span>
+                </div>
+                <p>A persona file. Tells your AI who it is, what it knows, how it works, and how to behave. Auto-loaded once installed.</p>
+            </div>
+
+            <div class="file">
+                <div class="file-head">
+                    <span class="file-icon">/references</span>
+                    <span class="file-name">The depth</span>
+                </div>
+                <p>Four to five reference documents covering the underlying methodology. Frameworks, worked examples, failure modes, the lot.</p>
+            </div>
+
+            <div class="file">
+                <div class="file-head">
+                    <span class="file-icon">/assets</span>
+                    <span class="file-name">The worksheets</span>
+                </div>
+                <p>Four or five working artefacts — checklists, planners, idea banks — the structured exercises your AI walks you through.</p>
+            </div>
+
+            <div class="file">
+                <div class="file-head">
+                    <span class="file-icon">HOW-TO</span>
+                    <span class="file-name">The install</span>
+                </div>
+                <p>Step-by-step setup for Claude, ChatGPT, and Gemini. Ten minutes, no faff.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     CATALOGUE
+================================================================ -->
+<section class="catalogue" id="catalogue">
+    <div class="container">
+        <span class="mono-label">The seven</span>
+        <h2>Skills that <em>earn their keep.</em></h2>
+        <p class="lede">Each one a complete coaching system. £14.99. Native Claude Skill plus plain .md included so it works anywhere.</p>
+
+        <div class="skills">
+
+            <!-- Pricing Your Offers -->
+            <div class="skill">
+                <span class="skill-tag">Money</span>
+                <h3 class="skill-name">How To Price <em>Your Offers</em></h3>
+                <p class="skill-desc">A pricing strategist. Find the right number for what you sell, articulate the value, hold the line on objections, build a pricing strategy that reflects what your work is actually worth.</p>
+                <div class="skill-foot">
+                    <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
+                    <a href="STRIPE_LINK_PRICING" class="skill-cta">Get instant access →</a>
+                </div>
+            </div>
+
+            <!-- Sound Human -->
+            <div class="skill">
+                <span class="skill-tag">Writing</span>
+                <h3 class="skill-name">How To Sound Human <em>Using AI</em></h3>
+                <p class="skill-desc">An AI writing coach for people who use AI to write but don't want to sound like everyone else who uses AI. Voice snapshots, prompt construction, fixing the patterns that scream "AI wrote this".</p>
+                <div class="skill-foot">
+                    <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
+                    <a href="STRIPE_LINK_SOUND_HUMAN" class="skill-cta">Get instant access →</a>
+                </div>
+            </div>
+
+            <!-- AI Audio -->
+            <div class="skill">
+                <span class="skill-tag">Production</span>
+                <h3 class="skill-name">How To Add AI Audio <em>To Your Content</em></h3>
+                <p class="skill-desc">An audio production coach for adding AI narration to your videos, slides, training, and content. No studio, no microphones, no recording dread.</p>
+                <div class="skill-foot">
+                    <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
+                    <a href="STRIPE_LINK_AI_AUDIO" class="skill-cta">Get instant access →</a>
+                </div>
+            </div>
+
+            <!-- Local Marketing -->
+            <div class="skill">
+                <span class="skill-tag">Marketing</span>
+                <h3 class="skill-name">How To Win <em>Your Local Market</em></h3>
+                <p class="skill-desc">A local marketing strategist for small businesses with a physical or local-service presence. Customer avatar, UVP, Google Business Profile, partnerships, social proof, loyalty — the lot.</p>
+                <div class="skill-foot">
+                    <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
+                    <a href="STRIPE_LINK_LOCAL_MARKETING" class="skill-cta">Get instant access →</a>
+                </div>
+            </div>
+
+            <!-- Loyal Customer Blueprint -->
+            <div class="skill">
+                <span class="skill-tag">Retention</span>
+                <h3 class="skill-name">How To Turn One-Time Buyers <em>Into Loyal Customers</em></h3>
+                <p class="skill-desc">Turn one-time buyers into repeat customers and advocates. A 30-day plan covering identification, communication, offers, feedback, and the metrics that tell you it's working.</p>
+                <div class="skill-foot">
+                    <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
+                    <a href="STRIPE_LINK_LOYAL_CUSTOMER" class="skill-cta">Get instant access →</a>
+                </div>
+            </div>
+
+            <!-- Know, Like, Trust -->
+            <div class="skill">
+                <span class="skill-tag">Audience</span>
+                <h3 class="skill-name">How To Build <em>Know, Like, Trust</em> In 30 Days</h3>
+                <p class="skill-desc">The 30-day journey of becoming someone your audience knows about, warms to, and is willing to trust. Specific daily actions across visibility, personal connection, and credibility.</p>
+                <div class="skill-foot">
+                    <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
+                    <a href="STRIPE_LINK_KLT" class="skill-cta">Get instant access →</a>
+                </div>
+            </div>
+
+            <!-- Magnetic Content -->
+            <div class="skill">
+                <span class="skill-tag">Content</span>
+                <h3 class="skill-name">How To Create Content <em>That Pulls People In</em></h3>
+                <p class="skill-desc">A content strategist for content that pulls people in rather than chases them. The 5 Secrets of magnetic content, an audience idea bank, and a working 90-day calendar system.</p>
+                <div class="skill-foot">
+                    <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
+                    <a href="STRIPE_LINK_MAGNETIC" class="skill-cta">Get instant access →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     HOW IT WORKS
+================================================================ -->
+<section class="how" id="how">
+    <div class="container">
+        <span class="mono-label">How it works</span>
+        <h2>Three steps. <em>Ten minutes.</em></h2>
+        <p class="lede">From buy to "your AI is now a specialist coach" in less time than your next cup of tea.</p>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">01</div>
+                <h3>Pick the skill</h3>
+                <p>Browse the seven. Pick the one that matches what you're trying to do. Buy it for £14.99. We email the bundle within sixty seconds.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <h3>Install it</h3>
+                <p>Drop the files into a Claude Project, ChatGPT Custom GPT, or Gemini Gem. Paste in a short brief about your business. Setup takes about ten minutes.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <h3>Use it</h3>
+                <p>Open a chat and talk to it like a specialist coach who already knows your business. The skill runs in the background of every conversation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     EMAIL CAPTURE
+================================================================ -->
+<section class="capture">
+    <div class="container--narrow">
+        <div class="capture-card">
+            <span class="mono-label">New skills drop weekly</span>
+            <h2>Get the <em>next one</em> before everyone else.</h2>
+            <p>No spam, no nurture sequence pretending to be useful — just the new-skill alerts and the occasional honest update on what we're building.</p>
+
+            <!-- Kit form (form uid: e59ab296b9) — applies fluent: audience tag + subscribes to Fluent Welcome sequence -->
+            <div class="kit-form-wrap">
+                <script async data-uid="e59ab296b9" src="https://rotd-2.kit.com/e59ab296b9/index.js"></script>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     FAQ
+================================================================ -->
+<section class="faq" id="faq">
+    <div class="container--narrow">
+        <span class="mono-label">Questions worth asking</span>
+        <h2>The bits people <em>actually want to know.</em></h2>
+
+        <details class="faq-item">
+            <summary class="faq-question">Can't I just prompt this myself?</summary>
+            <div class="faq-answer">
+                <p>Yes. You could. A technically competent prompter can ask Claude to "act as a pricing strategist" and get something workable. The pitch isn't that it's impossible to replicate — it's that you probably won't. What we sell is the work: the engineered methodology, the references, the worksheets, the install guide, compressed into a £14.99 bundle that drops in once and runs forever. We saved you a weekend.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Will this work with Claude? ChatGPT? Gemini?</summary>
+            <div class="faq-answer">
+                <p>All three. Each download includes a native Claude Skill (.zip) and the plain .md files. Upload the zip to Claude Skills, drop the files into a ChatGPT Custom GPT, paste the contents into a Gemini Gem. The install guide walks you through each one. Ten minutes per platform.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">What's actually inside a skill?</summary>
+            <div class="faq-answer">
+                <p>A SKILL.md persona file. Four or five reference documents covering the methodology in depth. Four or five working asset worksheets — the structured exercises your AI walks you through. A HOW-TO-INSTALL guide with step-by-step setup for each platform. Roughly 70 pages of structured material per skill, written tight and ready to go.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">How is this different from a course?</summary>
+            <div class="faq-answer">
+                <p>A course is something you sit down and learn. A Fluent skill is something your AI sits down and uses — on your specific business, in real time. You ask it a question; it applies the framework to your actual situation. Faster, more applied, considerably cheaper than a £997 course you'll never finish.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">How fast is delivery?</summary>
+            <div class="faq-answer">
+                <p>Sixty seconds. Stripe processes the payment, we email the bundle, you download. No accounts, no waiting room.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">What if it's not useful?</summary>
+            <div class="faq-answer">
+                <p>Reply to the delivery email asking for a refund. We refund within 24 hours, no questions. The cost to us is negligible; the cost to you of a dud download is £14.99 and we'd rather you didn't feel burnt.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Can I share the file with my team?</summary>
+            <div class="faq-answer">
+                <p>Yes. You bought it; treat it like any digital asset you've purchased. For team-scale use (10+ seats), email hello@fluent.md and we'll sort bulk pricing.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">When do new skills drop?</summary>
+            <div class="faq-answer">
+                <p>Weekly, roughly. Drop your email above and we'll let you know when each new one ships.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     FOOTER
+================================================================ -->
+<footer>
+    <div class="container footer-inner">
+        <span class="footer-brand">fluent<span class="dot">.</span>md</span>
+        <p class="footer-tag">Make your AI fluent in your work.</p>
+        <p class="footer-contact">hello@fluent.md</p>
+        <div class="footer-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/refunds">Refunds</a>
+        </div>
+        <p class="footer-contact" style="margin-top: 20px;">© 2026 Fluent. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

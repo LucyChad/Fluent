@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluent — AI skills for small business owners</title>
-    <meta name="description" content="Pre-built AI skills you install into Claude, ChatGPT, or Gemini. Specialist coaches for pricing, content, marketing, loyalty and more. £14.99 each. Instant download.">
+    <title>Fluent. AI skills for small business owners.</title>
+    <meta name="description" content="Seven specialist courses, packaged as installable AI skills with a printable ebook in every bundle. Pricing, content, marketing, audience, loyalty and the rest of running a small business. £14.99 a bundle while we launch.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Fluent — Make your AI fluent in your work">
-    <meta property="og:description" content="Pre-built AI skills you install into Claude, ChatGPT, or Gemini. £14.99 each. Instant download.">
+    <meta property="og:title" content="Fluent. Make your AI fluent in your work.">
+    <meta property="og:description" content="Seven specialist courses for small business owners. AI skill plus printable ebook in every bundle. £14.99 while we launch.">
     <meta property="og:type" content="website">
 
     <style>
@@ -26,6 +26,8 @@
             --peach-soft:    #F2C7A7;
             --pink:          #E8B4C4;
             --rose:          #EFC3B0;
+            --lilac:         #C8B5E0;
+            --lilac-soft:    #D9CBEC;
             --grey-soft:     rgba(245, 224, 208, 0.65);
             --grey-muted:    rgba(245, 224, 208, 0.4);
             --grey-faint:    rgba(245, 224, 208, 0.12);
@@ -94,8 +96,9 @@
         .gradient-head {
             background: linear-gradient(135deg,
                 var(--peach-soft) 0%,
-                var(--rose) 40%,
-                var(--pink) 100%);
+                var(--rose) 30%,
+                var(--pink) 65%,
+                var(--lilac) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -469,6 +472,85 @@
             .files { grid-template-columns: 1fr; }
         }
 
+        /* ==================== KICKERS + EBOOK CARD ==================== */
+        .kicker {
+            max-width: 980px;
+            margin: 56px auto 24px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .kicker::before,
+        .kicker::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--grey-faint);
+        }
+
+        .kicker span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--peach);
+            padding: 0 4px;
+            white-space: nowrap;
+        }
+
+        .kicker--lilac span { color: var(--lilac); }
+
+        .ebook-card {
+            max-width: 980px;
+            margin: 0 auto;
+            background: linear-gradient(135deg,
+                rgba(200, 181, 224, 0.10) 0%,
+                rgba(232, 180, 196, 0.07) 50%,
+                rgba(229, 138, 94, 0.05) 100%);
+            border: 1px solid rgba(200, 181, 224, 0.18);
+            border-radius: 12px;
+            padding: 44px 48px;
+            display: flex;
+            gap: 36px;
+            align-items: flex-start;
+        }
+
+        .ebook-card-icon {
+            flex-shrink: 0;
+        }
+
+        .ebook-icon {
+            color: var(--lilac) !important;
+            background: rgba(200, 181, 224, 0.10) !important;
+            border-color: rgba(200, 181, 224, 0.30) !important;
+        }
+
+        .ebook-card-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+
+        .ebook-card-body p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--grey-soft);
+        }
+
+        @media (max-width: 720px) {
+            .ebook-card {
+                flex-direction: column;
+                padding: 32px 28px;
+                gap: 20px;
+            }
+        }
+
         /* ==================== CATALOGUE ==================== */
         .catalogue {
             background-color: var(--cream);
@@ -630,7 +712,7 @@
             font-size: 52px;
             font-style: italic;
             font-weight: 400;
-            background: linear-gradient(135deg, var(--peach) 0%, var(--pink) 100%);
+            background: linear-gradient(135deg, var(--peach) 0%, var(--pink) 60%, var(--lilac) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -734,7 +816,7 @@
             border-color: rgba(229, 138, 94, 0.6);
         }
 
-        /* Kit form widget — coax its styling to feel native to the card */
+        /* Kit form widget. Coax its styling to feel native to the card. */
         .kit-form-wrap {
             max-width: 480px;
             margin: 0 auto;
@@ -915,12 +997,30 @@
             letter-spacing: 0.04em;
         }
 
+        .footer-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--grey-faint);
+            margin: 8px auto;
+        }
+
         .footer-links {
             display: flex;
             gap: 36px;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 12px;
+            margin-top: 4px;
+        }
+
+        .footer-legal {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: var(--grey-muted);
+            letter-spacing: 0.04em;
+            max-width: 540px;
+            line-height: 1.6;
+            margin-top: 24px;
+            opacity: 0.7;
         }
 
         .footer-links a {
@@ -977,13 +1077,13 @@
 
     <div class="container">
         <div class="hero-meta-strip">
-            <span>£14.99 per skill</span>
+            <span>Launch price · £14.99 a bundle</span>
+            <span>AI skill + printable ebook</span>
             <span>Works in Claude, ChatGPT &amp; Gemini</span>
-            <span>Instant download</span>
-            <span>From sale to install in under 10 minutes</span>
+            <span>Installed in ten minutes</span>
         </div>
 
-        <div class="hero-pill">7 specialist skills available now</div>
+        <div class="hero-pill">Seven specialist courses available now</div>
 
         <h1>
             <span class="gradient-head">Make your AI</span>
@@ -992,14 +1092,14 @@
             <span class="gradient-head">in your work.</span>
         </h1>
 
-        <p>Pre-built AI skills you install into Claude, ChatGPT, or Gemini. Specialist coaches that turn a generic assistant into one that knows what it's actually doing — in pricing, content, marketing, loyalty, and the rest of the work that keeps a small business running.</p>
+        <p>Seven specialist courses, packaged twice. Once as an installable AI skill that drops into Claude, ChatGPT or Gemini. Once as a properly bound ebook for the human in the chair. Because AI always needs sense-checking, and you can't beat real human intuition.</p>
 
         <div class="hero-actions">
             <a href="#catalogue" class="btn btn--large">Browse the seven</a>
             <a href="#how" class="btn btn--large btn--ghost">How it works</a>
         </div>
 
-        <p class="hero-fineprint">Native Claude Skill + plain .md included &nbsp;·&nbsp; No subscription &nbsp;·&nbsp; 14-day refund, no questions</p>
+        <p class="hero-fineprint">£14.99 launch price &nbsp;·&nbsp; Bundle worth £49+ &nbsp;·&nbsp; No subscription &nbsp;·&nbsp; Instant download</p>
     </div>
 </section>
 
@@ -1012,14 +1112,15 @@
         <span class="mono-label mono-label--left">Why this exists</span>
         <h2>You're already using AI. <em>It's just being average about it.</em></h2>
 
-        <p>The tools save real time. Refusing to use them is a different kind of mistake. But your AI is generic — it pattern-matches to the average answer for whatever you've asked it. Helpful enough for some things. For the stuff that actually matters — your pricing, your audience, your local market, the way your customers buy — average isn't good enough.</p>
-        <p>You could spend the weekend writing a brilliant system prompt that turns your AI into a specialist. You probably won't. We did it for you.</p>
+        <p>The time savings are real. The output is, well, fine. Fine enough for a social caption you didn't care about. Not fine enough for the pricing call that costs you eleven thousand pounds if you get it wrong. Not fine enough for the local marketing push that decides whether you book six clients this month or sixteen. Not fine enough for the email sequence that turns a one-time buyer into a regular, or doesn't.</p>
+
+        <p>You could spend the weekend writing a brilliant system prompt that turns your AI into a specialist. You probably won't. We did it for you. Seven of them. Each one a complete course on a thing that actually moves a small business.</p>
 
         <div class="problem-quote">
-            <p>The course economy is dead. Skills are the new playbook — £14.99, installed in ten minutes, runs forever.</p>
+            <p>The course economy is dead. Skills are the new playbook. £14.99, installed in ten minutes, runs forever.</p>
         </div>
 
-        <p>Every Fluent skill is a complete coaching system packaged for an AI assistant. The persona, the frameworks, the worksheets, the install guide — written by people who actually know the topic, delivered as a single tidy bundle. Drop it in, paste a few lines about your business, and your AI starts behaving like it's been doing this for years.</p>
+        <p>Every Fluent bundle is a complete course, packaged twice. Once as an installable AI skill that runs inside Claude, ChatGPT or Gemini. Once as a properly designed ebook you can read on the train, scribble on, or hand to someone on your team. Because AI always needs sense-checking, and you can't beat real human intuition.</p>
     </div>
 </section>
 
@@ -1030,8 +1131,10 @@
 <section class="what-you-get">
     <div class="container">
         <span class="mono-label">What you actually get</span>
-        <h2>Every skill is a complete coaching system. <em>Not a prompt. Not a PDF.</em></h2>
-        <p class="lede">Each download is a folder of structured Markdown plus a zipped installable bundle. Same engineered shape across every product. Designed for AI to execute against — not just nod along.</p>
+        <h2>Every bundle is two things at once. <em>Built for your AI. Bound for your brain.</em></h2>
+        <p class="lede">A full installable AI skill that runs inside Claude, ChatGPT or Gemini. And a properly designed ebook you can read away from a screen. Same engineered course, delivered twice, so neither half of the work falls down.</p>
+
+        <div class="kicker"><span>For your AI</span></div>
 
         <div class="files">
             <div class="file">
@@ -1047,7 +1150,7 @@
                     <span class="file-icon">/references</span>
                     <span class="file-name">The depth</span>
                 </div>
-                <p>Four to five reference documents covering the underlying methodology. Frameworks, worked examples, failure modes, the lot.</p>
+                <p>Four to five reference documents covering the methodology underneath. Frameworks, worked examples, failure modes, the lot.</p>
             </div>
 
             <div class="file">
@@ -1055,7 +1158,7 @@
                     <span class="file-icon">/assets</span>
                     <span class="file-name">The worksheets</span>
                 </div>
-                <p>Four or five working artefacts — checklists, planners, idea banks — the structured exercises your AI walks you through.</p>
+                <p>Four or five working worksheets. Checklists, planners, idea banks. The structured exercises your AI walks you through on your business.</p>
             </div>
 
             <div class="file">
@@ -1064,6 +1167,18 @@
                     <span class="file-name">The install</span>
                 </div>
                 <p>Step-by-step setup for Claude, ChatGPT, and Gemini. Ten minutes, no faff.</p>
+            </div>
+        </div>
+
+        <div class="kicker kicker--lilac"><span>For you</span></div>
+
+        <div class="ebook-card">
+            <div class="ebook-card-icon">
+                <span class="file-icon ebook-icon">ebook.pdf</span>
+            </div>
+            <div class="ebook-card-body">
+                <h3>The whole course, properly bound.</h3>
+                <p>Every bundle includes the full course as a designed ebook. Same methodology your AI runs, in a format you can sit with on the train, mark up with a pencil, or hand to someone on your team. AI always needs sense-checking, and you can't beat real human intuition. So you get both.</p>
             </div>
         </div>
     </div>
@@ -1076,8 +1191,8 @@
 <section class="catalogue" id="catalogue">
     <div class="container">
         <span class="mono-label">The seven</span>
-        <h2>Skills that <em>earn their keep.</em></h2>
-        <p class="lede">Each one a complete coaching system. £14.99. Native Claude Skill plus plain .md included so it works anywhere.</p>
+        <h2>Seven courses that <em>earn their keep.</em></h2>
+        <p class="lede">£14.99 a bundle while we launch. Each one a complete coaching system: AI skill plus printable ebook. Pick the one that solves the problem you've been swerving.</p>
 
         <div class="skills">
 
@@ -1118,7 +1233,7 @@
             <div class="skill">
                 <span class="skill-tag">Marketing</span>
                 <h3 class="skill-name">How To Win <em>Your Local Market</em></h3>
-                <p class="skill-desc">A local marketing strategist for small businesses with a physical or local-service presence. Customer avatar, UVP, Google Business Profile, partnerships, social proof, loyalty — the lot.</p>
+                <p class="skill-desc">A local marketing strategist for small businesses with a physical or local-service presence. Customer avatar, UVP, Google Business Profile, partnerships, social proof, loyalty. The lot.</p>
                 <div class="skill-foot">
                     <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
                     <a href="https://buy.stripe.com/28EfZg0XYeMS1lqgiNcQU08" class="skill-cta">Get instant access →</a>
@@ -1175,8 +1290,8 @@
         <div class="steps">
             <div class="step">
                 <div class="step-num">01</div>
-                <h3>Pick the skill</h3>
-                <p>Browse the seven. Pick the one that matches what you're trying to do. Buy it for £14.99. We email the bundle within sixty seconds.</p>
+                <h3>Pick a bundle</h3>
+                <p>Browse the seven. Pick the one that solves the problem you've been swerving. Buy it for £14.99. The next page hands you the download.</p>
             </div>
             <div class="step">
                 <div class="step-num">02</div>
@@ -1185,8 +1300,8 @@
             </div>
             <div class="step">
                 <div class="step-num">03</div>
-                <h3>Use it</h3>
-                <p>Open a chat and talk to it like a specialist coach who already knows your business. The skill runs in the background of every conversation.</p>
+                <h3>Use it both ways</h3>
+                <p>Talk to your AI like a specialist coach who already knows your business. Read the ebook when you want the work in your head, not just your assistant's. The skill runs in the background of every conversation.</p>
             </div>
         </div>
     </div>
@@ -1201,9 +1316,9 @@
         <div class="capture-card">
             <span class="mono-label">New skills drop weekly</span>
             <h2>Get the <em>next one</em> before everyone else.</h2>
-            <p>No spam, no nurture sequence pretending to be useful — just the new-skill alerts and the occasional honest update on what we're building.</p>
+            <p>No spam, no nurture sequence pretending to be useful. Just the new-bundle alerts and the occasional honest update on what we're building.</p>
 
-            <!-- Kit form (form uid: e59ab296b9) — applies fluent: audience tag + subscribes to Fluent Welcome sequence -->
+            <!-- Kit form (form uid: e59ab296b9). Applies fluent: audience tag + subscribes to Fluent Welcome sequence. -->
             <div class="kit-form-wrap">
                 <script async data-uid="e59ab296b9" src="https://rotd-2.kit.com/e59ab296b9/index.js"></script>
             </div>
@@ -1221,58 +1336,65 @@
         <h2>The bits people <em>actually want to know.</em></h2>
 
         <details class="faq-item">
+            <summary class="faq-question">Is this a course, an AI skill, or an ebook?</summary>
+            <div class="faq-answer">
+                <p>All three. Each bundle is the same course, packaged twice. As an installable AI skill that drops into Claude, ChatGPT or Gemini, where it runs as a specialist coach on your actual business. And as a properly designed ebook for the moments you don't want to be looking at a screen, or need to sense-check what the AI just told you. Same methodology, two ways in.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Why £14.99?</summary>
+            <div class="faq-answer">
+                <p>Because we're launching. Each bundle is engineered to sit comfortably at £39 to £49 on its own merits, and that's where the prices will move once we're past launch. £14.99 buys you the same bundle without the ceremony of being early. We'd rather you used it than priced you out.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
             <summary class="faq-question">Can't I just prompt this myself?</summary>
             <div class="faq-answer">
-                <p>Yes. You could. A technically competent prompter can ask Claude to "act as a pricing strategist" and get something workable. The pitch isn't that it's impossible to replicate — it's that you probably won't. What we sell is the work: the engineered methodology, the references, the worksheets, the install guide, compressed into a £14.99 bundle that drops in once and runs forever. We saved you a weekend.</p>
+                <p>Yes. You could. A technically competent prompter can ask Claude to "act as a pricing strategist" and get something workable. The pitch isn't that it's impossible to replicate. It's that you probably won't. What we sell is the work: the engineered methodology, the references, the worksheets, the install guide, the ebook, compressed into a £14.99 bundle that drops in once and runs forever. We saved you a weekend.</p>
             </div>
         </details>
 
         <details class="faq-item">
             <summary class="faq-question">Will this work with Claude? ChatGPT? Gemini?</summary>
             <div class="faq-answer">
-                <p>All three. Each download includes a native Claude Skill (.zip) and the plain .md files. Upload the zip to Claude Skills, drop the files into a ChatGPT Custom GPT, paste the contents into a Gemini Gem. The install guide walks you through each one. Ten minutes per platform.</p>
+                <p>All three. Each download includes a native Claude Skill (.zip), the plain .md files, and the ebook PDF. Upload the zip to Claude Skills, drop the files into a ChatGPT Custom GPT, paste the contents into a Gemini Gem. The install guide walks you through each one. Ten minutes per platform.</p>
             </div>
         </details>
 
         <details class="faq-item">
-            <summary class="faq-question">What's actually inside a skill?</summary>
+            <summary class="faq-question">What's inside a bundle?</summary>
             <div class="faq-answer">
-                <p>A SKILL.md persona file. Four or five reference documents covering the methodology in depth. Four or five working asset worksheets — the structured exercises your AI walks you through. A HOW-TO-INSTALL guide with step-by-step setup for each platform. Roughly 70 pages of structured material per skill, written tight and ready to go.</p>
-            </div>
-        </details>
-
-        <details class="faq-item">
-            <summary class="faq-question">How is this different from a course?</summary>
-            <div class="faq-answer">
-                <p>A course is something you sit down and learn. A Fluent skill is something your AI sits down and uses — on your specific business, in real time. You ask it a question; it applies the framework to your actual situation. Faster, more applied, considerably cheaper than a £997 course you'll never finish.</p>
+                <p>A SKILL.md persona file. Four or five reference documents covering the methodology in depth. Four or five working worksheets, the structured exercises your AI walks you through. A HOW-TO-INSTALL guide for each platform. And the full course as a designed ebook PDF. Around 70 pages of engineered material per bundle, written tight, ready to go.</p>
             </div>
         </details>
 
         <details class="faq-item">
             <summary class="faq-question">How fast is delivery?</summary>
             <div class="faq-answer">
-                <p>Sixty seconds. Stripe processes the payment, we email the bundle, you download. No accounts, no waiting room.</p>
+                <p>Sixty seconds. Stripe processes the payment, the next page gives you the download. No accounts, no waiting room, no "your bundle will arrive shortly".</p>
             </div>
         </details>
 
         <details class="faq-item">
-            <summary class="faq-question">What if it's not useful?</summary>
+            <summary class="faq-question">Can I share the bundle with my team?</summary>
             <div class="faq-answer">
-                <p>Reply to the delivery email asking for a refund. We refund within 24 hours, no questions. The cost to us is negligible; the cost to you of a dud download is £14.99 and we'd rather you didn't feel burnt.</p>
+                <p>Yes. You bought it; treat it like any digital asset you've purchased. For team-scale use (ten seats or more), email hello@fluent.md and we'll sort bulk pricing.</p>
             </div>
         </details>
 
         <details class="faq-item">
-            <summary class="faq-question">Can I share the file with my team?</summary>
+            <summary class="faq-question">When do new bundles drop?</summary>
             <div class="faq-answer">
-                <p>Yes. You bought it; treat it like any digital asset you've purchased. For team-scale use (10+ seats), email hello@fluent.md and we'll sort bulk pricing.</p>
+                <p>Roughly weekly. Drop your email above and we'll let you know when each new one ships.</p>
             </div>
         </details>
 
         <details class="faq-item">
-            <summary class="faq-question">When do new skills drop?</summary>
+            <summary class="faq-question">What if it doesn't land for me?</summary>
             <div class="faq-answer">
-                <p>Weekly, roughly. Drop your email above and we'll let you know when each new one ships.</p>
+                <p>Reply to your purchase email and we'll sort a refund. No forms, no justification needed. <a href="/refunds" style="color: var(--peach);">Full policy here.</a></p>
             </div>
         </details>
     </div>
@@ -1286,13 +1408,17 @@
     <div class="container footer-inner">
         <span class="footer-brand">fluent<span class="dot">.</span>md</span>
         <p class="footer-tag">Make your AI fluent in your work.</p>
-        <p class="footer-contact">hello@fluent.md</p>
+        <p class="footer-contact">For questions, replies and cancellations: hello@fluent.md</p>
+
+        <div class="footer-divider"></div>
+
         <div class="footer-links">
             <a href="/privacy">Privacy</a>
             <a href="/terms">Terms</a>
             <a href="/refunds">Refunds</a>
         </div>
-        <p class="footer-contact" style="margin-top: 20px;">© 2026 Fluent. All rights reserved.</p>
+
+        <p class="footer-legal">© 2026 Intelligent Impact Group Ltd. Registered in England &amp; Wales. Fluent is a trading name of Intelligent Impact Group Ltd.</p>
     </div>
 </footer>
 

@@ -1,0 +1,14 @@
+# Fluent — robots.txt
+# Specialist courses for small business owners, packaged as installable AI Course Skills.
+
+User-agent: *
+Allow: /
+Disallow: /thanks
+Disallow: /thanks.html
+Disallow: /api/
+
+# Structured overviews for AI assistants:
+#   https://fluent.md/llms.txt
+#   https://fluent.md/llms-full.txt
+
+Sitemap: https://fluent.md/sitemap.xml

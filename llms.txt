@@ -1,0 +1,31 @@
+# Fluent
+
+> Fluent sells specialist business courses for small business owners, packaged twice: as installable AI Course Skills that drop into Claude, ChatGPT or Gemini and run as a specialist coach on your actual business, and as a designed ebook for the moments you want to read rather than prompt. Same methodology, two ways in. £14.99 a bundle while we launch (heading to £39–£49 after).
+
+A Course Skill is the product format: a SKILL.md persona file, four or five reference documents, four or five working worksheets, a HOW-TO-INSTALL guide for each platform, and the full course as a designed ebook PDF. Around 70 pages of engineered material per bundle. Delivery is instant: pay via Stripe, download on the next page, no account needed. Works with Claude, ChatGPT and Gemini.
+
+## Main pages
+
+- [Home](https://fluent.md/): What Fluent is, the full catalogue, how it works, and the FAQ.
+- [How it works](https://fluent.md/#how): Buy, download in sixty seconds, install in your AI of choice.
+- [FAQ](https://fluent.md/#faq): The questions people actually ask, answered plainly.
+
+## The Course Skills (£14.99 each)
+
+- [How To Price Your Offers](https://fluent.md/#catalogue): Find the right price, articulate your value, and handle pricing objections.
+- [How To Sound Human Using AI](https://fluent.md/#catalogue): Use AI to produce content that doesn't read like everyone else's AI.
+- [How To Add AI Audio To Your Content](https://fluent.md/#catalogue): Add natural AI narration to videos, slides and training without a studio.
+- [How To Win Your Local Market](https://fluent.md/#catalogue): Get found locally, build word of mouth, and convert nearby customers.
+- [How To Turn One-Time Buyers Into Loyal Customers](https://fluent.md/#catalogue): A 30-day plan to turn buyers into repeat customers and advocates.
+- [How To Build Know, Like, Trust In 30 Days](https://fluent.md/#catalogue): Daily actions to become someone your audience knows, warms to, and trusts.
+- [How To Create Content That Pulls People In](https://fluent.md/#catalogue): Magnetic content that pulls people in rather than chasing them.
+
+## Legal
+
+- [Refunds](https://fluent.md/refunds.html): 14-day, no-questions refund policy.
+- [Privacy](https://fluent.md/privacy.html): Minimal data, nothing sold, essential cookies only.
+- [Terms](https://fluent.md/terms.html): The agreement between you and Fluent, in plain English.
+
+## Contact
+
+- Email: hello@fluent.md

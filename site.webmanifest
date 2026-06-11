@@ -1,0 +1,14 @@
+{
+  "name": "Fluent",
+  "short_name": "Fluent",
+  "description": "Specialist courses for small business owners, packaged as installable AI Course Skills with a downloadable course in every bundle.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1322",
+  "theme_color": "#0B1322",
+  "icons": [
+    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

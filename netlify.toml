@@ -41,3 +41,24 @@
   [headers.values]
     # The bundles themselves shouldn't be cached publicly — they're served via the function with auth
     Cache-Control = "no-store"
+
+# Long-cache immutable, fingerprint-stable assets (fonts, icons, OG images)
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/og/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

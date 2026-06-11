@@ -6,13 +6,52 @@
     <title>Fluent. AI skills for small business owners.</title>
     <meta name="description" content="Specialist courses for small business owners, packaged as installable AI skills with a downloadable course in every bundle. Pricing, content, marketing, audience, loyalty and the rest of running a small business. £14.99 a bundle while we launch.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/playfair.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/dmsans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0B1322">
+
+    <!-- Google Consent Mode v2 + GA4 (analytics denied until consent) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      try { if (localStorage.getItem('fluent_consent') === 'granted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      } } catch (e) {}
+      gtag('js', new Date());
+      gtag('config', 'G-N9X027NJ1B', { 'anonymize_ip': true });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9X027NJ1B"></script>
 
     <meta property="og:title" content="Fluent. Make your AI fluent in your work.">
     <meta property="og:description" content="Specialist courses for small business owners. AI skill plus downloadable course in every bundle. £14.99 a bundle while we launch.">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://fluent.md/">
+    <meta property="og:url" content="https://fluent.md/">
+    <meta property="og:image" content="https://fluent.md/assets/og/og-home.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Fluent. Make your AI fluent in your work.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fluent. Make your AI fluent in your work.">
+    <meta name="twitter:description" content="Specialist courses for small business owners. AI skill plus downloadable course in every bundle. £14.99 a bundle while we launch.">
+    <meta name="twitter:image" content="https://fluent.md/assets/og/og-home.png">
 
     <style>
         :root {
@@ -1317,6 +1356,274 @@
             .hero-meta-strip { gap: 24px; padding: 14px 20px; }
         }
     </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://fluent.md/#organization",
+      "name": "Fluent",
+      "legalName": "Intelligent Impact Group Ltd",
+      "url": "https://fluent.md/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://fluent.md/assets/icons/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "email": "hello@fluent.md",
+      "description": "Specialist courses for small business owners, packaged as installable AI Course Skills with a downloadable course in every bundle.",
+      "foundingDate": "2026",
+      "areaServed": "GB",
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://fluent.md/#website",
+      "url": "https://fluent.md/",
+      "name": "Fluent",
+      "publisher": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://fluent.md/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this a course, an AI skill, or an ebook?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All three. Each bundle is the same course, packaged twice: as an installable AI skill that drops into Claude, ChatGPT or Gemini and runs as a specialist coach on your business, and as a designed ebook for when you'd rather read or sense-check what the AI told you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why £14.99?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because we're launching. Each bundle is built to sit at £39 to £49 on its own merits, and that's where prices move after launch. £14.99 buys the same bundle without the ceremony of being early."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can't I just prompt this myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You could. A competent prompter can get something workable. The point is you probably won't. What we sell is the work: the engineered methodology, references, worksheets, install guide and ebook, compressed into a £14.99 bundle that drops in once and runs forever."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this work with Claude? ChatGPT? Gemini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All three. Each download includes a native Claude Skill (.zip), the plain .md files, and the ebook PDF. Upload the zip to Claude Skills, drop the files into a ChatGPT Custom GPT, or paste the contents into a Gemini Gem. About ten minutes per platform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's inside a bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A SKILL.md persona file, four or five reference documents, four or five working worksheets, a HOW-TO-INSTALL guide for each platform, and the full course as a designed ebook PDF. Around 70 pages per bundle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast is delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About sixty seconds. Stripe processes the payment and the next page gives you the download. No accounts, no waiting room."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I share the bundle with my team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You bought it, so treat it like any digital asset you've purchased. For team-scale use of ten seats or more, email hello@fluent.md and we'll sort bulk pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When do new bundles drop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roughly weekly. Add your email on the site and we'll let you know when each new one ships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if it doesn't land for me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reply to your purchase email and we'll sort a refund within 14 days. No forms, no justification needed."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "How To Price Your Offers",
+      "description": "Find the right price for your offers, articulate your value, and respond to pricing objections with confidence.",
+      "brand": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "category": "AI Course Skill",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://fluent.md/#catalogue",
+        "priceValidUntil": "2026-12-31",
+        "seller": {
+          "@id": "https://fluent.md/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "How To Sound Human Using AI",
+      "description": "Use AI to produce content that sounds like you wrote it, not like everyone else who uses AI.",
+      "brand": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "category": "AI Course Skill",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://fluent.md/#catalogue",
+        "priceValidUntil": "2026-12-31",
+        "seller": {
+          "@id": "https://fluent.md/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "How To Add AI Audio To Your Content",
+      "description": "Add natural AI narration to your videos, slides and training, without a studio or a microphone.",
+      "brand": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "category": "AI Course Skill",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://fluent.md/#catalogue",
+        "priceValidUntil": "2026-12-31",
+        "seller": {
+          "@id": "https://fluent.md/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "How To Win Your Local Market",
+      "description": "Get found in your local market, build the word of mouth that drives custom, and convert nearby customers.",
+      "brand": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "category": "AI Course Skill",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://fluent.md/#catalogue",
+        "priceValidUntil": "2026-12-31",
+        "seller": {
+          "@id": "https://fluent.md/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "How To Turn One-Time Buyers Into Loyal Customers",
+      "description": "Turn one-time buyers into repeat customers and advocates with a working 30-day loyalty plan.",
+      "brand": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "category": "AI Course Skill",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://fluent.md/#catalogue",
+        "priceValidUntil": "2026-12-31",
+        "seller": {
+          "@id": "https://fluent.md/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "How To Build Know, Like, Trust In 30 Days",
+      "description": "Become someone your audience knows, likes and trusts in 30 days of specific daily actions.",
+      "brand": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "category": "AI Course Skill",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://fluent.md/#catalogue",
+        "priceValidUntil": "2026-12-31",
+        "seller": {
+          "@id": "https://fluent.md/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "How To Create Content That Pulls People In",
+      "description": "Create content that pulls people in rather than chasing them, with a working 90-day plan.",
+      "brand": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "category": "AI Course Skill",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://fluent.md/#catalogue",
+        "priceValidUntil": "2026-12-31",
+        "seller": {
+          "@id": "https://fluent.md/#organization"
+        }
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
@@ -1773,5 +2080,6 @@
     </div>
 </footer>
 
+    <script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

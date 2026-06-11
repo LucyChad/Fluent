@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found. Fluent.</title>
+    <meta name="description" content="The page you were after has wandered off. Let us point you back to the good stuff.">
+    <meta name="robots" content="noindex">
+    <meta property="og:title" content="This page wandered off. Fluent.">
+    <meta property="og:description" content="The link is broken or the page has moved. Let us get you back to the good stuff.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fluent.md/404.html">
+    <meta property="og:image" content="https://fluent.md/assets/og/og-404.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="This page wandered off. Fluent.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="This page wandered off. Fluent.">
+    <meta name="twitter:description" content="The link is broken or the page has moved. Let us get you back to the good stuff.">
+    <meta name="twitter:image" content="https://fluent.md/assets/og/og-404.png">
+
+    <link rel="preload" href="/assets/fonts/playfair.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/dmsans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0B1322">
+
+    <!-- Google Consent Mode v2 + GA4 (analytics denied until consent) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      try { if (localStorage.getItem('fluent_consent') === 'granted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      } } catch (e) {}
+      gtag('js', new Date());
+      gtag('config', 'G-N9X027NJ1B', { 'anonymize_ip': true });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9X027NJ1B"></script>
+    <style>
+        :root {
+            --ink: #0B1322; --ink-deep: #060B17; --ink-soft: #131C2E;
+            --cream: #F5E8D8; --peach: #E58A5E; --pink: #E8B4C4;
+            --rose: #EFC3B0; --lilac: #C8B5E0;
+            --grey-soft: rgba(245,224,208,0.7); --grey-muted: rgba(245,224,208,0.42);
+            --grey-faint: rgba(245,224,208,0.12);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--ink);
+            color: var(--cream);
+            font-size: 17px; line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh; display: flex; flex-direction: column;
+        }
+        a { color: inherit; text-decoration: none; }
+        nav { padding: 24px 0; border-bottom: 1px solid var(--grey-faint); }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 32px; width: 100%; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--cream); font-weight: 600; font-style: italic; }
+        .nav-brand .dot { color: var(--peach); font-style: normal; }
+        .nav-back { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--grey-soft); letter-spacing: 0.12em; text-transform: uppercase; }
+        .nav-back:hover { color: var(--peach); }
+        main { flex: 1; display: flex; align-items: center; padding: 80px 0; position: relative; overflow: hidden; }
+        .glow { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+        .glow::before, .glow::after { content: ""; position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.5; }
+        .glow::before { width: 520px; height: 520px; top: -180px; right: -120px; background: radial-gradient(circle, var(--peach), transparent 70%); }
+        .glow::after { width: 460px; height: 460px; bottom: -200px; left: -140px; background: radial-gradient(circle, var(--lilac), transparent 70%); opacity: 0.4; }
+        .wrap { position: relative; z-index: 1; }
+        .code { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: var(--lilac); display: block; margin-bottom: 22px; }
+        h1 {
+            font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700;
+            font-size: clamp(40px, 7vw, 76px); line-height: 1.05; letter-spacing: -0.02em;
+            background: linear-gradient(105deg, var(--peach), var(--rose) 40%, var(--pink) 70%, var(--lilac));
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 22px;
+        }
+        .lede { font-size: clamp(17px, 2.4vw, 20px); color: var(--grey-soft); max-width: 520px; margin-bottom: 40px; }
+        .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
+        .btn {
+            font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px;
+            padding: 14px 26px; border-radius: 999px; transition: transform 0.15s ease, opacity 0.15s ease;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn--primary { background: linear-gradient(105deg, var(--peach), var(--pink) 60%, var(--lilac)); color: var(--ink); }
+        .btn--ghost { border: 1px solid var(--grey-faint); color: var(--cream); }
+        .btn--ghost:hover { border-color: var(--peach); color: var(--peach); }
+        .links { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--grey-muted); }
+        .links a { color: var(--grey-soft); text-decoration: underline; text-underline-offset: 3px; }
+        .links a:hover { color: var(--peach); }
+        .links .sep { margin: 0 10px; opacity: 0.4; }
+        footer { background: var(--ink-deep); padding: 36px 0; text-align: center; color: var(--grey-muted); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://fluent.md/#organization",
+      "name": "Fluent",
+      "legalName": "Intelligent Impact Group Ltd",
+      "url": "https://fluent.md/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://fluent.md/assets/icons/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "email": "hello@fluent.md",
+      "description": "Specialist courses for small business owners, packaged as installable AI Course Skills with a downloadable course in every bundle.",
+      "foundingDate": "2026",
+      "areaServed": "GB",
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://fluent.md/#website",
+      "url": "https://fluent.md/",
+      "name": "Fluent",
+      "publisher": {
+        "@id": "https://fluent.md/#organization"
+      },
+      "inLanguage": "en-GB"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-inner">
+        <a href="/" class="nav-brand">fluent<span class="dot">.</span>md</a>
+        <a href="/" class="nav-back">← Back to home</a>
+    </div>
+</nav>
+
+<main>
+    <div class="glow"></div>
+    <div class="container wrap">
+        <span class="code">Error 404</span>
+        <h1>This page wandered off.</h1>
+        <p class="lede">The link's broken, the page has moved, or it never existed. Either way, you're one click from the good stuff.</p>
+        <div class="actions">
+            <a href="/" class="btn btn--primary">Back to home</a>
+            <a href="/#catalogue" class="btn btn--ghost">Browse Course Skills</a>
+        </div>
+        <p class="links">
+            Or jump to:
+            <a href="/#how">How it works</a><span class="sep">·</span>
+            <a href="/#faq">FAQ</a><span class="sep">·</span>
+            <a href="mailto:hello@fluent.md">hello@fluent.md</a>
+        </p>
+    </div>
+</main>
+
+<footer>© 2026 Intelligent Impact Group Ltd. Fluent is a trading name. All rights reserved.</footer>
+
+    <script src="/assets/js/consent.js" defer></script>
+</body>
+</html>

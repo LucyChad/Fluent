@@ -673,6 +673,275 @@
             color: var(--ink);
         }
 
+        /* ==================== COMING NEXT ==================== */
+        .coming-next {
+            background-color: var(--ink);
+            color: var(--cream);
+            position: relative;
+        }
+
+        .coming-next h2 {
+            font-size: clamp(32px, 4.5vw, 52px);
+            color: var(--cream);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .coming-next h2 em {
+            font-style: italic;
+            color: var(--lilac);
+        }
+
+        .coming-next .lede {
+            text-align: center;
+            color: var(--grey-soft);
+            font-size: 17px;
+            max-width: 580px;
+            margin: 0 auto 64px;
+        }
+
+        .coming-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .coming {
+            background: var(--ink-soft);
+            border: 1px dashed rgba(200, 181, 224, 0.32);
+            border-radius: 12px;
+            padding: 32px 30px;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .coming:hover {
+            border-color: rgba(200, 181, 224, 0.55);
+            transform: translateY(-2px);
+        }
+
+        .coming-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--lilac);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .coming-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--lilac);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .coming-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--cream);
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: -0.015em;
+            line-height: 1.25;
+        }
+
+        .coming-name em {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .coming-cat {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: var(--grey-muted);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-top: auto;
+            padding-top: 24px;
+            border-top: 1px solid var(--grey-faint);
+        }
+
+        @media (max-width: 860px) {
+            .coming-grid { grid-template-columns: 1fr; max-width: 460px; }
+        }
+
+        /* ==================== SHAPE THE LIBRARY ==================== */
+        .shape {
+            background-color: var(--cream);
+            color: var(--text-dark);
+        }
+
+        .shape h2 {
+            font-size: clamp(34px, 5vw, 56px);
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .shape h2 em {
+            font-style: italic;
+            color: var(--peach);
+        }
+
+        .shape .lede {
+            text-align: center;
+            color: var(--text-mid);
+            max-width: 600px;
+            margin: 0 auto 72px;
+            font-size: 17px;
+        }
+
+        .shape-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .shape-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(30, 22, 18, 0.08);
+            border-radius: 12px;
+            padding: 40px 36px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .shape-card-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .shape-card--peach .shape-card-label { color: var(--peach); }
+        .shape-card--lilac .shape-card-label { color: #8E76C0; }
+
+        .shape-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .shape-card h3 em {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .shape-card > p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-mid);
+            margin-bottom: 28px;
+        }
+
+        .shape-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .shape-form input[type="email"],
+        .shape-form input[type="text"],
+        .shape-form textarea {
+            background: #F9F1E5;
+            border: 1px solid rgba(30, 22, 18, 0.08);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            color: var(--text-dark);
+            transition: border-color 0.15s, background 0.15s;
+        }
+
+        .shape-form input::placeholder,
+        .shape-form textarea::placeholder {
+            color: rgba(74, 58, 48, 0.5);
+        }
+
+        .shape-form input:focus,
+        .shape-form textarea:focus {
+            outline: none;
+            border-color: var(--peach);
+            background: #FFFFFF;
+        }
+
+        .shape-form textarea {
+            min-height: 88px;
+            resize: vertical;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .shape-form .file-row {
+            background: #F9F1E5;
+            border: 1px dashed rgba(30, 22, 18, 0.18);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 13px;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        .shape-form .file-row input[type="file"] {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            margin-top: 8px;
+            display: block;
+            width: 100%;
+            color: var(--text-mid);
+        }
+
+        .shape-form button {
+            background: var(--ink);
+            color: var(--cream);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 15px 24px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            margin-top: 6px;
+        }
+
+        .shape-card--lilac .shape-form button {
+            background: linear-gradient(135deg, var(--peach) 0%, var(--pink) 60%, var(--lilac) 100%);
+            color: var(--ink);
+        }
+
+        .shape-form button:hover {
+            transform: translateY(-1px);
+        }
+
+        .shape-form .small {
+            font-size: 12px;
+            color: var(--text-mid);
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 760px) {
+            .shape-grid { grid-template-columns: 1fr; }
+            .shape-card { padding: 32px 24px; }
+        }
+
         /* ==================== HOW IT WORKS ==================== */
         .how {
             background-color: var(--ink);
@@ -1271,6 +1540,88 @@
                     <span class="skill-price"><span class="skill-price-currency">£</span>14.99</span>
                     <a href="https://buy.stripe.com/dRm6oGbCCawC7JO6IdcQU04" class="skill-cta">Get instant access →</a>
                 </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     COMING NEXT
+================================================================ -->
+<section class="coming-next" id="coming">
+    <div class="container">
+        <span class="mono-label">Coming next</span>
+        <h2>The library's <em>still growing.</em></h2>
+        <p class="lede">Three more Course Skills in production. Each one a complete coaching system, same shape as the existing library, dropping at £14.99 a bundle while we launch.</p>
+
+        <div class="coming-grid">
+            <div class="coming">
+                <span class="coming-tag">In production</span>
+                <h3 class="coming-name">How To Get <em>Your Time Back</em></h3>
+                <span class="coming-cat">Time</span>
+            </div>
+            <div class="coming">
+                <span class="coming-tag">In production</span>
+                <h3 class="coming-name">How To Get <em>Your Money Sorted</em></h3>
+                <span class="coming-cat">Finance</span>
+            </div>
+            <div class="coming">
+                <span class="coming-tag">In production</span>
+                <h3 class="coming-name">How To Build A <em>Content Marketing Engine</em></h3>
+                <span class="coming-cat">Marketing</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     SHAPE THE LIBRARY
+================================================================ -->
+<section class="shape" id="shape">
+    <div class="container">
+        <span class="mono-label">Help shape the library</span>
+        <h2>Tell us what to <em>build next.</em></h2>
+        <p class="lede">Two ways in. Suggest a Course Skill you'd love to see, or send us a course you already own and we'll build the AI version of it for you.</p>
+
+        <div class="shape-grid">
+
+            <!-- Suggest -->
+            <div class="shape-card shape-card--peach">
+                <span class="shape-card-label">Suggest one</span>
+                <h3>What would <em>actually help</em> your business?</h3>
+                <p>Drop us a line. If enough people are asking for the same skill, it goes to the top of the build queue.</p>
+
+                <form class="shape-form" name="suggest-skill" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="suggest-skill">
+                    <p hidden><label>Don't fill this in: <input name="bot-field"></label></p>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="suggestion" placeholder="The skill or course you'd love to see (a sentence or two)" required></textarea>
+                    <button type="submit">Send your suggestion</button>
+                    <span class="small">We reply to every one.</span>
+                </form>
+            </div>
+
+            <!-- BYO -->
+            <div class="shape-card shape-card--lilac">
+                <span class="shape-card-label">Bring your own</span>
+                <h3>Got a course you've <em>already paid for?</em></h3>
+                <p>Send us the materials and we'll build a private Fluent skill from it. Yours, properly engineered, installed in days not weeks.</p>
+
+                <form class="shape-form" name="bring-your-own" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+                    <input type="hidden" name="form-name" value="bring-your-own">
+                    <p hidden><label>Don't fill this in: <input name="bot-field"></label></p>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="description" placeholder="What's the course? What do you want it to do for you?" required></textarea>
+                    <div class="file-row">
+                        Drop the course files here (PDFs, docs, slides)
+                        <input type="file" name="upload" multiple>
+                    </div>
+                    <button type="submit">Send it over</button>
+                    <span class="small">Large libraries? Leave the upload blank and we'll send a secure link for the full lot.</span>
+                </form>
             </div>
 
         </div>

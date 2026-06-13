@@ -31,6 +31,9 @@ For each one:
 | 5 | How To Turn One-Time Buyers Into Loyal Customers | Turn one-time buyers into repeat customers and advocates. A 30-day plan covering identification, communication, offers, feedback, and the metrics that tell you it's working. | `loyal-customer-blueprint` | £14.99 |
 | 6 | How To Build Know, Like, Trust In 30 Days | The 30-day journey of becoming someone your audience knows about, warms to, and is willing to trust. Specific daily actions across visibility, personal connection, and credibility. | `know-like-trust` | £14.99 |
 | 7 | How To Create Content That Pulls People In | A content strategist for content that pulls people in rather than chases them. The 5 Secrets of magnetic content, an audience idea bank, and a working 90-day calendar system. | `magnetic-content` | £14.99 |
+| 8 | How To Manage Your Time Effectively | A time management coach for small business owners. The 3 P's system: Prioritise, Plan, Produce. Cut the list, plan the week, get the work that matters done. | `manage-your-time` | £14.99 |
+
+**Note (#8 Manage Your Time):** Product + price already created live via the Stripe MCP — Product `prod_UgXeEjOGUzWLVq`, Price `price_1ThAYqCE50urKgDfgAi4MmB8`. You only need to create the Payment Link (the MCP can't do that step). Open the product, create a payment link on `price_1ThAYqCE50urKgDfgAi4MmB8`, set the redirect to `https://fluent.md/thanks?session_id={CHECKOUT_SESSION_ID}`, enable promotion codes, then paste the URL over `STRIPE_LINK_MANAGE_YOUR_TIME` in `index.html`.
 
 ---
 

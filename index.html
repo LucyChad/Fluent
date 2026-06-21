@@ -74,6 +74,43 @@
   }
 }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "The Get-Paid Trio",
+      "description": "A bundle of three Fluent Course Skills: Price Your Offers, Turn One-Time Buyers Into Loyal Customers, and Win Your Local Market. Three skills for the price of two.",
+      "brand": { "@id": "https://fluent.md/#organization" },
+      "category": "AI Course Skill bundle",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": { "@type": "Offer", "price": "30.00", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://fluent.md/#catalogue", "priceValidUntil": "2026-12-31", "seller": { "@id": "https://fluent.md/#organization" } }
+    },
+    {
+      "@type": "Product",
+      "name": "The Content Engine Trio",
+      "description": "A bundle of three Fluent Course Skills: Create Content That Pulls People In, Sound Human Using AI, and Add AI Audio To Your Content. Three skills for the price of two.",
+      "brand": { "@id": "https://fluent.md/#organization" },
+      "category": "AI Course Skill bundle",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": { "@type": "Offer", "price": "30.00", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://fluent.md/#catalogue", "priceValidUntil": "2026-12-31", "seller": { "@id": "https://fluent.md/#organization" } }
+    },
+    {
+      "@type": "Product",
+      "name": "The Full Library",
+      "description": "Every Fluent Course Skill in one bundle: all eight specialist coaches plus their downloadable courses.",
+      "brand": { "@id": "https://fluent.md/#organization" },
+      "category": "AI Course Skill bundle",
+      "url": "https://fluent.md/#catalogue",
+      "image": "https://fluent.md/assets/og/og-home.png",
+      "offers": { "@type": "Offer", "price": "99.00", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://fluent.md/#catalogue", "priceValidUntil": "2026-12-31", "seller": { "@id": "https://fluent.md/#organization" } }
+    }
+  ]
+}
+    </script>
     <style>
         :root {
             --ink:           #0B1322;
@@ -796,6 +833,41 @@
             .bundle { grid-template-columns: 1fr; padding: 32px; gap: 28px; }
             .bundle-buy { text-align: left; }
         }
+
+        .bundles { display: grid; gap: 24px; margin-bottom: 56px; }
+        .bundles .bundle { margin-bottom: 0; }
+        .bundle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+        .bundle-card {
+            background: var(--ink); color: var(--cream);
+            border: 1px solid rgba(200, 181, 224, 0.26); border-radius: 14px;
+            padding: 28px; display: flex; flex-direction: column;
+            position: relative; overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .bundle-card:hover { transform: translateY(-3px); border-color: rgba(200, 181, 224, 0.5); }
+        .bundle-card::before {
+            content: ""; position: absolute; width: 220px; height: 220px;
+            top: -100px; right: -80px;
+            background: radial-gradient(circle, rgba(200, 181, 224, 0.22), transparent 70%);
+            filter: blur(50px); pointer-events: none;
+        }
+        .bundle-card .bundle-tag { margin-bottom: 14px; }
+        .bundle-card-name {
+            font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700;
+            font-size: 23px; line-height: 1.1; margin: 0 0 16px; position: relative; z-index: 1;
+            background: linear-gradient(105deg, var(--peach), var(--pink) 60%, var(--lilac));
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .bundle-card-list { list-style: none; display: grid; gap: 9px; margin: 0 0 22px; position: relative; z-index: 1; flex-grow: 1; }
+        .bundle-card-list li { font-size: 14px; color: var(--grey-soft); padding-left: 20px; position: relative; line-height: 1.5; }
+        .bundle-card-list li::before { content: "\2192"; position: absolute; left: 0; color: var(--peach); font-family: 'JetBrains Mono', monospace; }
+        .bundle-card-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding-top: 18px; border-top: 1px solid rgba(245, 224, 208, 0.12); position: relative; z-index: 1; }
+        .bundle-card-price { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--cream); line-height: 1; }
+        .bundle-card-price .cur { color: var(--lilac); font-size: 18px; font-style: italic; font-weight: 400; margin-right: 2px; vertical-align: 4px; }
+        .bundle-card-was { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--grey-muted); margin-top: 6px; letter-spacing: 0.03em; }
+        .bundle-card-was s { opacity: 0.85; }
+        .bundle-card-cta { background: linear-gradient(105deg, var(--peach), var(--pink) 60%, var(--lilac)); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; padding: 11px 20px; border-radius: 100px; transition: transform 0.15s ease; white-space: nowrap; align-self: center; }
+        .bundle-card-cta:hover { transform: translateY(-2px); }
 
         /* ==================== COMING NEXT ==================== */
         .coming-next {
@@ -1877,23 +1949,83 @@
         <h2>Course Skills that <em>earn their keep.</em></h2>
         <p class="lede">£14.99 a bundle while we launch. Each one a complete coaching system: AI skill plus downloadable course. Pick the one that solves the problem you've been swerving. New bundles added all the time.</p>
 
-        <!-- Featured bundle: The Audience Trio -->
-        <div class="bundle">
-            <div class="bundle-main">
-                <span class="bundle-tag">Best value · the trio</span>
-                <h3 class="bundle-name">The Audience Trio</h3>
-                <p class="bundle-desc">Three Course Skills that build on each other. Become someone worth following, make content people actually want, and sound like yourself while the AI does the heavy lifting. Bought together, one of them is effectively on us.</p>
-                <ul class="bundle-list">
-                    <li>How To Build Know, Like, Trust In 30 Days</li>
-                    <li>How To Create Content That Pulls People In</li>
-                    <li>How To Sound Human Using AI</li>
-                </ul>
+        <!-- Bundles -->
+        <div class="bundles">
+
+            <!-- Full Library (hero) -->
+            <div class="bundle bundle--feature">
+                <div class="bundle-main">
+                    <span class="bundle-tag">Best value · the full library</span>
+                    <h3 class="bundle-name">The Full Library</h3>
+                    <p class="bundle-desc">Every Course Skill on the shelf, in one go. All eight specialist coaches and their downloadable courses: pricing, content, audience, loyalty, local, audio, time, and sounding human. The whole toolkit for running the business, at the lowest price per skill we do.</p>
+                    <ul class="bundle-list">
+                        <li>All 8 Course Skills, the complete set</li>
+                        <li>Eight AI coaches plus eight downloadable courses</li>
+                        <li>Instant download. Install once, runs forever.</li>
+                    </ul>
+                </div>
+                <div class="bundle-buy">
+                    <div class="bundle-price"><span class="cur">£</span>99</div>
+                    <p class="bundle-was"><s>£119.92</s> bought separately</p>
+                    <p class="bundle-note">The whole shelf, in one go.</p>
+                    <a href="https://buy.stripe.com/aFa8wO366bAG5BG1nTcQU0g" class="bundle-cta">Get the full library →</a>
+                </div>
             </div>
-            <div class="bundle-buy">
-                <div class="bundle-price"><span class="cur">£</span>30</div>
-                <p class="bundle-was"><s>£44.97</s> bought separately</p>
-                <p class="bundle-note">Three skills, the price of two.</p>
-                <a href="https://buy.stripe.com/fZu5kC8qqawC9RWgiNcQU0d" class="bundle-cta">Get the trio →</a>
+
+            <!-- Trios -->
+            <div class="bundle-grid">
+
+                <div class="bundle-card">
+                    <span class="bundle-tag">The trio</span>
+                    <h4 class="bundle-card-name">The Audience Trio</h4>
+                    <ul class="bundle-card-list">
+                        <li>Build Know, Like, Trust In 30 Days</li>
+                        <li>Create Content That Pulls People In</li>
+                        <li>Sound Human Using AI</li>
+                    </ul>
+                    <div class="bundle-card-foot">
+                        <div>
+                            <div class="bundle-card-price"><span class="cur">£</span>30</div>
+                            <div class="bundle-card-was"><s>£44.97</s> · save £14.97</div>
+                        </div>
+                        <a href="https://buy.stripe.com/fZu5kC8qqawC9RWgiNcQU0d" class="bundle-card-cta">Get it →</a>
+                    </div>
+                </div>
+
+                <div class="bundle-card">
+                    <span class="bundle-tag">The trio</span>
+                    <h4 class="bundle-card-name">The Get-Paid Trio</h4>
+                    <ul class="bundle-card-list">
+                        <li>Price Your Offers</li>
+                        <li>Turn One-Time Buyers Into Loyal Customers</li>
+                        <li>Win Your Local Market</li>
+                    </ul>
+                    <div class="bundle-card-foot">
+                        <div>
+                            <div class="bundle-card-price"><span class="cur">£</span>30</div>
+                            <div class="bundle-card-was"><s>£44.97</s> · save £14.97</div>
+                        </div>
+                        <a href="https://buy.stripe.com/cNi6oGdKKgV08NS1nTcQU0e" class="bundle-card-cta">Get it →</a>
+                    </div>
+                </div>
+
+                <div class="bundle-card">
+                    <span class="bundle-tag">The trio</span>
+                    <h4 class="bundle-card-name">The Content Engine Trio</h4>
+                    <ul class="bundle-card-list">
+                        <li>Create Content That Pulls People In</li>
+                        <li>Sound Human Using AI</li>
+                        <li>Add AI Audio To Your Content</li>
+                    </ul>
+                    <div class="bundle-card-foot">
+                        <div>
+                            <div class="bundle-card-price"><span class="cur">£</span>30</div>
+                            <div class="bundle-card-was"><s>£44.97</s> · save £14.97</div>
+                        </div>
+                        <a href="https://buy.stripe.com/00waEWdKK7kq1lq0jPcQU0f" class="bundle-card-cta">Get it →</a>
+                    </div>
+                </div>
+
             </div>
         </div>
 

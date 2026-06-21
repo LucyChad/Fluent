@@ -47,9 +47,18 @@ exports.handler = async (event) => {
             return textResponse(403, 'Payment not complete');
         }
 
-        const skus = (session.line_items?.data || [])
-            .map(li => li.price?.product?.metadata?.fluent_sku)
-            .filter(Boolean);
+        // Expand each purchased product into one or more SKUs. Bundle products
+        // set metadata.fluent_skus (comma-separated child slugs); single products
+        // set metadata.fluent_sku. The requested sku must be in the expanded set.
+        const skus = [];
+        for (const li of (session.line_items?.data || [])) {
+            const md = li.price?.product?.metadata || {};
+            if (md.fluent_skus) {
+                md.fluent_skus.split(',').map(s => s.trim()).filter(Boolean).forEach(s => skus.push(s));
+            } else if (md.fluent_sku) {
+                skus.push(md.fluent_sku.trim());
+            }
+        }
 
         if (!skus.includes(sku)) {
             return textResponse(403, 'This SKU was not purchased on this session');

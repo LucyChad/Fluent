@@ -53,6 +53,27 @@
     <meta name="twitter:description" content="Specialist courses for small business owners. AI skill plus downloadable course in every bundle. £14.99 a bundle while we launch.">
     <meta name="twitter:image" content="https://fluent.md/assets/og/og-home.png">
 
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "The Audience Trio",
+  "description": "A bundle of three Fluent Course Skills: Build Know, Like, Trust in 30 Days, Create Content That Pulls People In, and Sound Human Using AI. Three skills for the price of two.",
+  "brand": { "@id": "https://fluent.md/#organization" },
+  "category": "AI Course Skill bundle",
+  "url": "https://fluent.md/#catalogue",
+  "image": "https://fluent.md/assets/og/og-home.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "30.00",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
+    "url": "https://fluent.md/#catalogue",
+    "priceValidUntil": "2026-12-31",
+    "seller": { "@id": "https://fluent.md/#organization" }
+  }
+}
+    </script>
     <style>
         :root {
             --ink:           #0B1322;
@@ -710,6 +731,70 @@
         .skill-cta:hover {
             background: var(--peach);
             color: var(--ink);
+        }
+
+        /* ==================== BUNDLE (THE TRIO) ==================== */
+        .bundle {
+            background: var(--ink);
+            color: var(--cream);
+            border-radius: 16px;
+            padding: 44px;
+            margin-bottom: 48px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(200, 181, 224, 0.30);
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .bundle::before {
+            content: "";
+            position: absolute;
+            width: 440px; height: 440px;
+            top: -190px; right: -130px;
+            background: radial-gradient(circle, rgba(200, 181, 224, 0.38), transparent 70%);
+            filter: blur(90px);
+            pointer-events: none;
+        }
+        .bundle-main { position: relative; z-index: 1; }
+        .bundle-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px; font-weight: 500;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--lilac);
+            margin-bottom: 18px; display: block;
+        }
+        .bundle-name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 3.4vw, 40px);
+            font-weight: 700; font-style: italic;
+            letter-spacing: -0.02em; line-height: 1.05;
+            margin-bottom: 16px;
+            background: linear-gradient(105deg, var(--peach), var(--rose) 40%, var(--pink) 70%, var(--lilac));
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .bundle-desc { font-size: 15.5px; line-height: 1.7; color: var(--grey-soft); margin-bottom: 24px; max-width: 470px; }
+        .bundle-list { list-style: none; display: grid; gap: 10px; }
+        .bundle-list li { font-size: 15px; color: var(--cream); padding-left: 26px; position: relative; }
+        .bundle-list li::before { content: "\2192"; position: absolute; left: 0; color: var(--peach); font-family: 'JetBrains Mono', monospace; }
+        .bundle-buy { position: relative; z-index: 1; text-align: center; }
+        .bundle-price { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 700; color: var(--cream); line-height: 1; }
+        .bundle-price .cur { color: var(--lilac); font-size: 32px; font-style: italic; font-weight: 400; margin-right: 2px; vertical-align: 6px; }
+        .bundle-was { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--grey-muted); margin-top: 12px; letter-spacing: 0.04em; }
+        .bundle-was s { opacity: 0.85; }
+        .bundle-note { font-size: 14px; color: var(--lilac); margin: 8px 0 22px; font-style: italic; font-family: 'Playfair Display', serif; }
+        .bundle-cta {
+            display: inline-block;
+            background: linear-gradient(105deg, var(--peach), var(--pink) 60%, var(--lilac));
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px;
+            padding: 15px 34px; border-radius: 100px; transition: transform 0.15s ease;
+        }
+        .bundle-cta:hover { transform: translateY(-2px); }
+        @media (max-width: 720px) {
+            .bundle { grid-template-columns: 1fr; padding: 32px; gap: 28px; }
+            .bundle-buy { text-align: left; }
         }
 
         /* ==================== COMING NEXT ==================== */
@@ -1791,6 +1876,26 @@
         <span class="mono-label">The library</span>
         <h2>Course Skills that <em>earn their keep.</em></h2>
         <p class="lede">£14.99 a bundle while we launch. Each one a complete coaching system: AI skill plus downloadable course. Pick the one that solves the problem you've been swerving. New bundles added all the time.</p>
+
+        <!-- Featured bundle: The Audience Trio -->
+        <div class="bundle">
+            <div class="bundle-main">
+                <span class="bundle-tag">Best value · the trio</span>
+                <h3 class="bundle-name">The Audience Trio</h3>
+                <p class="bundle-desc">Three Course Skills that build on each other. Become someone worth following, make content people actually want, and sound like yourself while the AI does the heavy lifting. Bought together, one of them is effectively on us.</p>
+                <ul class="bundle-list">
+                    <li>How To Build Know, Like, Trust In 30 Days</li>
+                    <li>How To Create Content That Pulls People In</li>
+                    <li>How To Sound Human Using AI</li>
+                </ul>
+            </div>
+            <div class="bundle-buy">
+                <div class="bundle-price"><span class="cur">£</span>30</div>
+                <p class="bundle-was"><s>£44.97</s> bought separately</p>
+                <p class="bundle-note">Three skills, the price of two.</p>
+                <a href="https://buy.stripe.com/fZu5kC8qqawC9RWgiNcQU0d" class="bundle-cta">Get the trio →</a>
+            </div>
+        </div>
 
         <div class="skills">
 

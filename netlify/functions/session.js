@@ -49,10 +49,19 @@ exports.handler = async (event) => {
             return jsonError(403, 'Payment not complete');
         }
 
-        // Extract fluent_sku from each line item's product metadata
-        const skus = (session.line_items?.data || [])
-            .map(li => li.price?.product?.metadata?.fluent_sku)
-            .filter(Boolean);
+        // Expand each purchased product into one or more SKUs.
+        // A bundle product sets metadata.fluent_skus to a comma-separated list of
+        // child slugs (e.g. "know-like-trust,magnetic-content,sound-human").
+        // A single product sets metadata.fluent_sku to one slug.
+        const skus = [];
+        for (const li of (session.line_items?.data || [])) {
+            const md = li.price?.product?.metadata || {};
+            if (md.fluent_skus) {
+                md.fluent_skus.split(',').map(s => s.trim()).filter(Boolean).forEach(s => skus.push(s));
+            } else if (md.fluent_sku) {
+                skus.push(md.fluent_sku.trim());
+            }
+        }
 
         if (skus.length === 0) {
             return jsonError(404, 'No Fluent products found on this session');

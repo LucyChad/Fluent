@@ -91,7 +91,7 @@ exports.handler = async (event) => {
         }
         const session = await res.json();
 
-        if (session.payment_status !== 'paid') {
+        if (session.payment_status !== 'paid' && session.payment_status !== 'no_payment_required') {
             return { statusCode: 200, body: 'Not paid; ignored' };
         }
 

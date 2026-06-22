@@ -45,7 +45,7 @@ exports.handler = async (event) => {
         const session = await res.json();
 
         // Only release downloads for paid sessions
-        if (session.payment_status !== 'paid') {
+        if (session.payment_status !== 'paid' && session.payment_status !== 'no_payment_required') {
             return jsonError(403, 'Payment not complete');
         }
 

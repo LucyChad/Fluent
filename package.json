@@ -1,0 +1,9 @@
+{
+  "name": "fluent-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fluent (fluent.md) marketing site and Netlify Functions.",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

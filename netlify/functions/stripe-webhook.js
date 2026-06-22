@@ -6,12 +6,14 @@
 // Required env vars:
 //   STRIPE_SECRET_KEY      - already set (used to fetch the session + line items)
 //   STRIPE_WEBHOOK_SECRET  - the signing secret from the Stripe webhook endpoint
-//   RESEND_API_KEY         - transactional email (resend.com)
+//   GMAIL_USER             - the Google Workspace mailbox that sends (e.g. hello@fluent.md)
+//   GMAIL_APP_PASSWORD     - a Google app password for that mailbox (16 chars, spaces ignored)
 // Optional env vars:
 //   KIT_API_KEY            - if set, the buyer is upserted + tagged in Kit (best-effort)
 //   DELIVERY_FROM          - from address; defaults to "Fluent <hello@fluent.md>"
 
 const crypto = require('crypto');
+const nodemailer = require('nodemailer');
 
 const STRIPE_API = 'https://api.stripe.com/v1';
 const SITE = 'https://fluent.md';
@@ -49,9 +51,10 @@ exports.handler = async (event) => {
     const sig = event.headers['stripe-signature'] || event.headers['Stripe-Signature'];
     const whSecret = process.env.STRIPE_WEBHOOK_SECRET;
     const stripeSecret = process.env.STRIPE_SECRET_KEY;
-    const resendKey = process.env.RESEND_API_KEY;
+    const gmailUser = process.env.GMAIL_USER;
+    const gmailPass = process.env.GMAIL_APP_PASSWORD;
 
-    if (!whSecret || !stripeSecret || !resendKey) {
+    if (!whSecret || !stripeSecret || !gmailUser || !gmailPass) {
         console.error('Missing required env vars');
         return { statusCode: 500, body: 'Server misconfigured' };
     }
@@ -113,7 +116,7 @@ exports.handler = async (event) => {
         const downloadUrl = `${SITE}/thanks?session_id=${encodeURIComponent(sessionId)}`;
 
         // --- Send the delivery email (must succeed; 500 => Stripe retries) ---
-        await sendDeliveryEmail({ resendKey, email, skus: uniqueSkus, downloadUrl });
+        await sendDeliveryEmail({ gmailUser, gmailPass, email, skus: uniqueSkus, downloadUrl });
 
         // --- Best-effort: tag the buyer in Kit (never blocks delivery) ---
         if (process.env.KIT_API_KEY) {
@@ -141,7 +144,7 @@ function verifyStripeSignature(payload, header, secret) {
     } catch (e) { return false; }
 }
 
-async function sendDeliveryEmail({ resendKey, email, skus, downloadUrl }) {
+async function sendDeliveryEmail({ gmailUser, gmailPass, email, skus, downloadUrl }) {
     const from = process.env.DELIVERY_FROM || 'Fluent <hello@fluent.md>';
     const items = skus.map(s => SKU_TITLES[s] || s);
     const itemsHtml = items.map(t => `<li style="margin:0 0 6px;">${escapeHtml(t)}</li>`).join('');
@@ -179,22 +182,21 @@ Stuck on anything? Reply to this email and we'll sort it.
 
 Fluent is a trading name of Intelligent Impact Group Ltd. fluent.md`;
 
-    const r = await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: { 'Authorization': `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            from,
-            to: [email],
-            reply_to: 'hello@fluent.md',
-            subject: 'Your Fluent download' + (items.length > 1 ? 's are ready' : ' is ready'),
-            html,
-            text
-        })
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: { user: gmailUser, pass: gmailPass.replace(/\s+/g, '') }
     });
-    if (!r.ok) {
-        const body = await r.text();
-        throw new Error(`Resend send failed: ${r.status} ${body}`);
-    }
+
+    await transporter.sendMail({
+        from,
+        to: email,
+        replyTo: 'hello@fluent.md',
+        subject: 'Your Fluent download' + (items.length > 1 ? 's are ready' : ' is ready'),
+        html,
+        text
+    });
 }
 
 async function tagInKit(email, skus) {

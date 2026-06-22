@@ -1,12 +1,12 @@
 # Fluent — Full overview
 
-> Specialist courses for small business owners, packaged as installable AI Course Skills with a downloadable course in every bundle. £14.99 a bundle while we launch.
+> Specialist courses for small business owners, packaged as installable AI Course Skills with a downloadable course in every one. Individual Course Skills are £14.99 each while we launch; multi-skill bundles save more.
 
 Fluent is a trading name of Intelligent Impact Group Ltd, registered in England & Wales. Website: https://fluent.md. Contact: hello@fluent.md.
 
 ## What Fluent is
 
-Fluent turns specialist business know-how into Course Skills. Each bundle is the same course, packaged twice:
+Fluent turns specialist business know-how into Course Skills. Each one is the same course, packaged twice:
 
 1. As an installable AI skill that drops into Claude, ChatGPT or Gemini, where it runs as a specialist coach on your actual business.
 2. As a properly designed ebook PDF, for the moments you don't want to be looking at a screen, or need to sense-check what the AI just told you.
@@ -15,7 +15,7 @@ The reasoning behind the two formats: AI always needs sense-checking, and you ca
 
 ## What a "Course Skill" is
 
-Course Skill is the product format name. Every bundle contains:
+Course Skill is the product format name. Every Course Skill contains:
 
 - A SKILL.md persona file (the specialist coach your AI becomes).
 - Four or five reference documents covering the methodology in depth.
@@ -23,9 +23,9 @@ Course Skill is the product format name. Every bundle contains:
 - A HOW-TO-INSTALL guide for each platform (Claude, ChatGPT, Gemini).
 - The full course as a designed ebook PDF.
 
-Around 70 pages of engineered material per bundle, written tight and ready to go. (Fluent uses "worksheet", never "artefact".)
+Around 70 pages of engineered material each, written tight and ready to go. (Fluent uses "worksheet", never "artefact".)
 
-## The catalogue (all £14.99 at launch)
+## The catalogue (£14.99 each at launch)
 
 - How To Price Your Offers — find the right price for your offers, articulate your value, respond to pricing objections, and build a pricing strategy that reflects what your work is worth.
 - How To Sound Human Using AI — use AI to produce content without sounding like everyone else who uses AI; describe your voice, write prompts that produce human first drafts, and spot the patterns that make AI writing feel robotic.
@@ -34,31 +34,43 @@ Around 70 pages of engineered material per bundle, written tight and ready to go
 - How To Turn One-Time Buyers Into Loyal Customers — a 30-day plan to turn one-time buyers into repeat customers and repeat customers into advocates, with a communication system, loyalty offers, and the metrics that prove it's working.
 - How To Build Know, Like, Trust In 30 Days — a 30-day journey of specific daily actions across visibility, personal connection and credibility, so your audience knows about you, warms to you, and trusts you.
 - How To Create Content That Pulls People In — the secrets of magnetic content (resonance, repurposing, distribution, measurement, consistency), a deep idea bank from your audience's real questions, and a working 90-day content calendar.
+- How To Manage Your Time Effectively — the 3 P's system (Prioritise, Plan, Produce) for owners who reach the end of the day wondering where it went: cut the list, plan the week, and get the work that matters done.
 
-New bundles drop roughly weekly. More are in production, including Course Skills on time management, small business finance, and content marketing.
+New Course Skills drop roughly weekly. More are in production, including small business finance and content marketing.
+
+## Bundles
+
+Buy several Course Skills together and save. Each bundle delivers the individual skills (AI skill plus ebook) for each title it contains.
+
+- The Audience Trio — £29: Build Know, Like, Trust In 30 Days + Create Content That Pulls People In + Sound Human Using AI. For owners growing an audience: get known, make content that lands, sound like yourself doing it. Three skills for the price of two.
+- The Get-Paid Trio — £29: Price Your Offers + Turn One-Time Buyers Into Loyal Customers + Win Your Local Market. The money one: charge properly, keep customers, win your patch.
+- The Content Engine Trio — £29: Create Content That Pulls People In + Sound Human Using AI + Add AI Audio To Your Content. Everything for making content that sounds like you and travels.
+- The Full Launch Library — £99: all eight Course Skills available at launch, in one go. The lowest price per skill Fluent offers. Scoped to the catalogue at launch.
 
 ## Pricing
 
-- £14.99 per bundle while Fluent is launching.
-- Each bundle is engineered to sit comfortably at £39–£49 on its own merits; prices move there after launch.
-- The launch price buys the same bundle without the ceremony of being early.
+- £14.99 per individual Course Skill while Fluent is launching.
+- Trios (any of the three themed sets) are £29: three skills for the price of two.
+- The Full Launch Library is £99 for all eight skills available at launch.
+- Each individual skill is engineered to sit comfortably at £39–£49 on its own merits; prices move there after launch.
 
 ## Compatibility and delivery
 
 - Works with Claude, ChatGPT and Gemini.
 - Each download includes a native Claude Skill (.zip), the plain .md files, and the ebook PDF.
 - Install: upload the zip to Claude Skills, drop the files into a ChatGPT Custom GPT, or paste the contents into a Gemini Gem. The install guide covers each, around ten minutes per platform.
-- Delivery is instant: Stripe processes the payment and the next page gives you the download. No account, no waiting.
+- Delivery is instant: Stripe processes the payment and the next page gives you the download (every skill in a bundle is delivered at once). No account, no waiting.
 
 ## FAQ (condensed)
 
 - Is this a course, an AI skill, or an ebook? All three. The same methodology, delivered as an installable AI skill and as a designed ebook.
-- Why £14.99? Because Fluent is launching. The bundles are built to sit at £39–£49; the launch price skips the ceremony of being early.
-- Can't I just prompt this myself? You could, but you probably won't. What Fluent sells is the work: the engineered methodology, references, worksheets, install guide and ebook, compressed into one bundle that drops in once and runs forever.
-- What's inside a bundle? A SKILL.md persona, four to five reference documents, four to five worksheets, a per-platform install guide, and the full ebook PDF (~70 pages).
+- Why £14.99? Because Fluent is launching. The skills are built to sit at £39–£49; the launch price skips the ceremony of being early.
+- Are there bundles? Yes. Three themed trios at £29 (three skills for the price of two) and the Full Launch Library at £99 (all eight skills available at launch).
+- Can't I just prompt this myself? You could, but you probably won't. What Fluent sells is the work: the engineered methodology, references, worksheets, install guide and ebook, compressed into one product that drops in once and runs forever.
+- What's inside a Course Skill? A SKILL.md persona, four to five reference documents, four to five worksheets, a per-platform install guide, and the full ebook PDF (~70 pages).
 - How fast is delivery? About sixty seconds. Pay, then download on the next page.
 - Can I share with my team? Yes; for ten seats or more, email hello@fluent.md for bulk pricing.
-- When do new bundles drop? Roughly weekly.
+- When do new skills drop? Roughly weekly.
 - What if it doesn't land? Reply to your purchase email for a no-questions refund within 14 days.
 
 ## Policies
